@@ -122,6 +122,7 @@ type coordinator struct {
 
 	currentAgent SessionAgent
 	agents       map[string]SessionAgent
+	hookRunner   *hooks.Runner
 
 	// Skills discovery results (session-start snapshot).
 	allSkills    []*skills.Skill // Pre-filter: all discovered after dedup.
@@ -146,6 +147,7 @@ type CoordinatorOptions struct {
 	Notify      pubsub.Publisher[notify.Notification]
 	RunComplete pubsub.Publisher[notify.RunComplete]
 	Skills      *skills.Manager
+	HookRunner  *hooks.Runner
 	Interactive bool
 }
 
@@ -179,6 +181,16 @@ func NewCoordinator(ctx context.Context, opts CoordinatorOptions) (Coordinator, 
 		activeSkills: activeSkills,
 		skillTracker: skillTracker,
 		interactive:  opts.Interactive,
+	}
+
+	// Wire the shared hook runner into the agent and permission
+	// service.
+	c.hookRunner = opts.HookRunner
+	if c.hookRunner != nil {
+		c.permissions.SetLifecycleHooks(permission.LifecycleHookRunnerFunc(func(ctx context.Context, eventName, sessionID string) error {
+			_, err := c.hookRunner.Run(ctx, eventName, sessionID, "", "")
+			return err
+		}))
 	}
 
 	agentCfg, ok := opts.Config.Config().Agents[config.AgentCoder]
@@ -626,6 +638,7 @@ func (c *coordinator) buildAgent(ctx context.Context, prompt *prompt.Prompt, age
 		Tools:                nil,
 		Notify:               c.notify,
 		RunComplete:          c.runComplete,
+		LifecycleHooks:       c.hookRunner,
 	})
 
 	c.readyWg.Go(func() error {
