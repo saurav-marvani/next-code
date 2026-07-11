@@ -49,8 +49,13 @@ func scrollbarHideCmd(seq int) tea.Cmd {
 	})
 }
 
-// Chat represents the chat UI model that handles chat interactions and
-// messages.
+// sidebarScrollbarHideCmd returns a command that sends a sidebarScrollbarHideMsg
+// after the timeout.
+func sidebarScrollbarHideCmd(seq int) tea.Cmd {
+	return tea.Tick(scrollbarHideDuration, func(_ time.Time) tea.Msg {
+		return sidebarScrollbarHideMsg{seq: seq}
+	})
+}
 type Chat struct {
 	com      *common.Common
 	list     *list.List
