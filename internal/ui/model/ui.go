@@ -2980,7 +2980,7 @@ func (m *UI) generateLayout(w, h int) uiLayout {
 	// The editor height: textarea height + margin for attachments and bottom spacing.
 	editorHeight := m.textarea.Height() + editorHeightMargin
 	// The sidebar width
-	sidebarWidth := 30
+	sidebarWidth := 32
 	// The header height
 	const landingHeaderHeight = 4
 
