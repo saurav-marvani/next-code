@@ -56,6 +56,7 @@ func sidebarScrollbarHideCmd(seq int) tea.Cmd {
 		return sidebarScrollbarHideMsg{seq: seq}
 	})
 }
+
 type Chat struct {
 	com      *common.Common
 	list     *list.List
