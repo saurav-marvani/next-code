@@ -737,8 +737,11 @@ func workspaceToProto(ws *Workspace) proto.Workspace {
 // while the first set one will still log the mismatch.
 func logFirstWinsMismatch(existing *Workspace, args proto.Workspace) {
 	existingCfg := existing.Cfg.Config()
-	existingMode := proto.PermissionModeToProto(existing.Cfg.Overrides().PermissionMode)
-	if existingMode == args.PermissionMode &&
+	// Compare the internal modes so an unset request ("") matches the
+	// normalized default ("normal") instead of spuriously logging.
+	existingMode := existing.Cfg.Overrides().PermissionMode
+	requestedMode := proto.ProtoModeToPermission(args.PermissionMode)
+	if existingMode == requestedMode &&
 		existingCfg.Options.Debug == args.Debug &&
 		existingCfg.Options.DataDirectory == args.DataDir &&
 		stringSlicesEqual(existing.Env, args.Env) {
@@ -748,8 +751,8 @@ func logFirstWinsMismatch(existing *Workspace, args proto.Workspace) {
 		"Workspace flag mismatch on duplicate create; first wins",
 		"workspace_id", existing.ID,
 		"path", existing.Path,
-		"existing_permission_mode", existingMode,
-		"requested_permission_mode", args.PermissionMode,
+		"existing_permission_mode", proto.PermissionModeToProto(existingMode),
+		"requested_permission_mode", proto.PermissionModeToProto(requestedMode),
 		"existing_debug", existingCfg.Options.Debug,
 		"requested_debug", args.Debug,
 		"existing_data_dir", existingCfg.Options.DataDirectory,
