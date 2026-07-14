@@ -96,7 +96,7 @@ crush --debug --cwd /path/to/project
 # Run in yolo mode (skip prompts for non-dangerous commands)
 crush -y
 
-# Run in super yolo mode (skip all prompts including dangerous commands)
+# Run in sysadmin mode (skip all prompts including dangerous commands)
 crush -yy
 
 # Run with custom data directory
@@ -269,8 +269,8 @@ func setupLocalWorkspace(cmd *cobra.Command) (workspace.Workspace, func(), error
 
 	cfg := store.Config()
 	if yoloCount > 1 {
-		store.Overrides().PermissionMode = permission.PermissionModeSuperYolo
-		fmt.Fprintln(os.Stderr, "Warning: super yolo mode is active. All commands, including potentially dangerous ones, will be auto-approved without prompting.")
+		store.Overrides().PermissionMode = permission.PermissionModeSysadmin
+		fmt.Fprintln(os.Stderr, "Warning: sysadmin mode is active. All commands, including potentially dangerous ones, will be auto-approved without prompting.")
 	} else if yoloCount == 1 {
 		store.Overrides().PermissionMode = permission.PermissionModeYolo
 	}
@@ -396,8 +396,8 @@ func connectToServer(cmd *cobra.Command) (*client.Client, *proto.Workspace, func
 
 	wsPermMode := proto.WorkspacePermissionModeNormal
 	if yoloCount > 1 {
-		wsPermMode = proto.WorkspacePermissionModeSuperYolo
-		fmt.Fprintln(os.Stderr, "Warning: super yolo mode is active. All commands, including potentially dangerous ones, will be auto-approved without prompting.")
+		wsPermMode = proto.WorkspacePermissionModeSysadmin
+		fmt.Fprintln(os.Stderr, "Warning: sysadmin mode is active. All commands, including potentially dangerous ones, will be auto-approved without prompting.")
 	} else if yoloCount == 1 {
 		wsPermMode = proto.WorkspacePermissionModeYolo
 	}
