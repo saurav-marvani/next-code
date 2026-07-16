@@ -19,7 +19,8 @@ const (
 	// ReasoningID is the identifier for the reasoning effort dialog.
 	ReasoningID              = "reasoning"
 	reasoningDialogMaxWidth  = 50
-	reasoningDialogMaxHeight = 10
+	reasoningDialogMinHeight = 8
+	reasoningDialogMaxHeight = 16
 )
 
 // Reasoning represents a dialog for selecting reasoning effort.
@@ -165,15 +166,30 @@ func (r *Reasoning) Cursor() *tea.Cursor {
 func (r *Reasoning) Draw(scr uv.Screen, area uv.Rectangle) *tea.Cursor {
 	t := r.com.Styles
 	width := max(0, min(reasoningDialogMaxWidth, area.Dx()-t.Dialog.View.GetHorizontalBorderSize()))
-	height := max(0, min(reasoningDialogMaxHeight, area.Dy()-t.Dialog.View.GetVerticalBorderSize()))
 	innerWidth := width - t.Dialog.View.GetHorizontalFrameSize()
+
+	r.input.SetWidth(dialogInputTextWidth(t, r.input, innerWidth))
+
 	heightOffset := t.Dialog.Title.GetVerticalFrameSize() + titleContentHeight +
 		t.Dialog.InputPrompt.GetVerticalFrameSize() + inputContentHeight +
 		t.Dialog.HelpView.GetVerticalFrameSize() +
 		t.Dialog.View.GetVerticalFrameSize()
 
-	r.input.SetWidth(dialogInputTextWidth(t, r.input, innerWidth))
-	r.list.SetSize(innerWidth, max(0, height-heightOffset))
+	// Size the dialog to fit the list content, clamped to min/max bounds.
+	listTotalHeight := r.list.TotalHeight()
+	desiredHeight := heightOffset + listTotalHeight
+	maxAvailable := area.Dy() - t.Dialog.View.GetVerticalBorderSize()
+	height := max(reasoningDialogMinHeight, min(reasoningDialogMaxHeight, desiredHeight, maxAvailable))
+
+	listHeight := max(0, height-heightOffset)
+	// Reserve one column for the scrollbar only when it will actually
+	// show, so the list otherwise spans the full content width.
+	scrollbarWidth := 0
+	if listTotalHeight > listHeight+1 {
+		scrollbarWidth = 1
+	}
+	listWidth := max(0, innerWidth-scrollbarWidth)
+	r.list.SetSize(listWidth, listHeight)
 
 	rc := NewRenderContext(t, width)
 	rc.Title = "Select Reasoning Effort"
@@ -188,6 +204,7 @@ func (r *Reasoning) Draw(scr uv.Screen, area uv.Rectangle) *tea.Cursor {
 	}
 
 	listView := t.Dialog.List.Height(r.list.Height()).Render(r.list.Render())
+	listView = joinScrollbar(t, listView, listHeight, listTotalHeight, listHeight+1, r.list.Offset())
 	rc.AddPart(listView)
 	rc.Help = renderDialogHelp(t, &r.help, r, innerWidth)
 
