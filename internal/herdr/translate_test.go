@@ -3,11 +3,11 @@ package herdr
 import (
 	"testing"
 
-	"github.com/charmbracelet/nextcode/internal/agent/notify"
-	"github.com/charmbracelet/nextcode/internal/message"
-	"github.com/charmbracelet/nextcode/internal/permission"
-	"github.com/charmbracelet/nextcode/internal/proto"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/agent/notify"
+	"github.com/sauravmarvani/nextcode/internal/message"
+	"github.com/sauravmarvani/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
 	"github.com/stretchr/testify/assert"
 )
 

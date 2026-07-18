@@ -10,7 +10,7 @@ import (
 	"sync"
 
 	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/lsp"
+	"github.com/sauravmarvani/nextcode/internal/lsp"
 )
 
 const LSPRestartToolName = "lsp_restart"

@@ -15,7 +15,7 @@ import (
 	"charm.land/lipgloss/v2"
 	"github.com/lucasb-eyer/go-colorful"
 
-	"github.com/charmbracelet/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/csync"
 )
 
 const (

@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"charm.land/lipgloss/v2/tree"
-	"github.com/charmbracelet/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/mattn/go-isatty"
 	"github.com/spf13/cobra"
 )

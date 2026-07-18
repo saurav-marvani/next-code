@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/db"
+	"github.com/sauravmarvani/nextcode/internal/db"
 )
 
 // Service defines the interface for tracking file reads in sessions.

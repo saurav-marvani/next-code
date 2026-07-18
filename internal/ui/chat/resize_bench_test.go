@@ -5,10 +5,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/charmbracelet/nextcode/internal/db"
-	"github.com/charmbracelet/nextcode/internal/message"
-	"github.com/charmbracelet/nextcode/internal/ui/list"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"github.com/sauravmarvani/nextcode/internal/db"
+	"github.com/sauravmarvani/nextcode/internal/message"
+	"github.com/sauravmarvani/nextcode/internal/ui/list"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 )
 
 // BenchmarkResizeSession reproduces the resize re-render path over a real

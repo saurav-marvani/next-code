@@ -8,13 +8,13 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/charmbracelet/nextcode/internal/app"
-	"github.com/charmbracelet/nextcode/internal/client"
-	"github.com/charmbracelet/nextcode/internal/message"
-	"github.com/charmbracelet/nextcode/internal/permission"
-	"github.com/charmbracelet/nextcode/internal/proto"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
-	"github.com/charmbracelet/nextcode/internal/skills"
+	"github.com/sauravmarvani/nextcode/internal/app"
+	"github.com/sauravmarvani/nextcode/internal/client"
+	"github.com/sauravmarvani/nextcode/internal/message"
+	"github.com/sauravmarvani/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/skills"
 	"github.com/stretchr/testify/require"
 )
 

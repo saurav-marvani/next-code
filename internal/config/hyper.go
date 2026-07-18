@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"charm.land/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/nextcode/internal/agent/hyper"
+	"github.com/sauravmarvani/nextcode/internal/agent/hyper"
 	xetag "github.com/charmbracelet/x/etag"
 )
 

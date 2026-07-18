@@ -13,12 +13,12 @@ import (
 	"time"
 
 	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/agent"
-	"github.com/charmbracelet/nextcode/internal/app"
-	"github.com/charmbracelet/nextcode/internal/backend"
-	"github.com/charmbracelet/nextcode/internal/message"
-	"github.com/charmbracelet/nextcode/internal/proto"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/agent"
+	"github.com/sauravmarvani/nextcode/internal/app"
+	"github.com/sauravmarvani/nextcode/internal/backend"
+	"github.com/sauravmarvani/nextcode/internal/message"
+	"github.com/sauravmarvani/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

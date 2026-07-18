@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/agent/tools/mcp"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/home"
-	"github.com/charmbracelet/nextcode/internal/skills"
+	"github.com/sauravmarvani/nextcode/internal/agent/tools/mcp"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/home"
+	"github.com/sauravmarvani/nextcode/internal/skills"
 )
 
 var namedArgPattern = regexp.MustCompile(`\$([A-Z][A-Z0-9_]*)`)

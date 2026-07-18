@@ -7,9 +7,9 @@ import (
 	"log/slog"
 
 	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/agent/tools"
-	"github.com/charmbracelet/nextcode/internal/hooks"
-	"github.com/charmbracelet/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/agent/tools"
+	"github.com/sauravmarvani/nextcode/internal/hooks"
+	"github.com/sauravmarvani/nextcode/internal/permission"
 	"github.com/tidwall/sjson"
 )
 

@@ -13,9 +13,9 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/charmbracelet/nextcode/internal/backend"
-	"github.com/charmbracelet/nextcode/internal/config"
-	_ "github.com/charmbracelet/nextcode/internal/swagger"
+	"github.com/sauravmarvani/nextcode/internal/backend"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	_ "github.com/sauravmarvani/nextcode/internal/swagger"
 	httpswagger "github.com/swaggo/http-swagger/v2"
 )
 

@@ -17,7 +17,7 @@ import (
 	"charm.land/catwalk/pkg/catwalk"
 )
 
-//go:generate wget -O provider.json https://hyper.charm.land/v1/provider
+//go:generate wget -O provider.json https://hyper.nextcode.io/v1/provider
 
 //go:embed provider.json
 var embedded []byte

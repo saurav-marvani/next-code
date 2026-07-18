@@ -8,12 +8,12 @@ import (
 	"os/signal"
 
 	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/nextcode/internal/clipboard"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/oauth"
-	"github.com/charmbracelet/nextcode/internal/oauth/copilot"
-	"github.com/charmbracelet/nextcode/internal/oauth/hyper"
-	"github.com/charmbracelet/nextcode/internal/workspace"
+	"github.com/sauravmarvani/nextcode/internal/clipboard"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/oauth"
+	"github.com/sauravmarvani/nextcode/internal/oauth/copilot"
+	"github.com/sauravmarvani/nextcode/internal/oauth/hyper"
+	"github.com/sauravmarvani/nextcode/internal/workspace"
 	"github.com/pkg/browser"
 	"github.com/spf13/cobra"
 )

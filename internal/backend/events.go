@@ -5,10 +5,10 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 
-	mcptools "github.com/charmbracelet/nextcode/internal/agent/tools/mcp"
-	"github.com/charmbracelet/nextcode/internal/app"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
+	mcptools "github.com/sauravmarvani/nextcode/internal/agent/tools/mcp"
+	"github.com/sauravmarvani/nextcode/internal/app"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
 )
 
 // SubscribeEvents returns a per-caller event channel for a workspace.

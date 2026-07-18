@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/agent/hyper"
-	"github.com/charmbracelet/nextcode/internal/event"
-	"github.com/charmbracelet/nextcode/internal/oauth"
+	"github.com/sauravmarvani/nextcode/internal/agent/hyper"
+	"github.com/sauravmarvani/nextcode/internal/event"
+	"github.com/sauravmarvani/nextcode/internal/oauth"
 )
 
 // DeviceAuthResponse contains the response from the device authorization endpoint.

@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/charmbracelet/nextcode/internal/diffdetect"
-	"github.com/charmbracelet/nextcode/internal/stringext"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"github.com/sauravmarvani/nextcode/internal/diffdetect"
+	"github.com/sauravmarvani/nextcode/internal/stringext"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 )
 
 type toolResultContentWidths struct {

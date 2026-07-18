@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/agent/prompt"
-	"github.com/charmbracelet/nextcode/internal/agent/tools/mcp"
-	"github.com/charmbracelet/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/agent/prompt"
+	"github.com/sauravmarvani/nextcode/internal/agent/tools/mcp"
+	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/stretchr/testify/require"
 )
 

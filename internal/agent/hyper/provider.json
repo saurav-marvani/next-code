@@ -1,7 +1,7 @@
 {
-  "name": "Charm Hyper",
+  "name": "NextCode Hyper",
   "id": "hyper",
-  "api_endpoint": "https://hyper.charm.land/api/v1/fantasy",
+  "api_endpoint": "https://hyper.nextcode.io/api/v1/fantasy",
   "type": "hyper",
   "default_large_model_id": "qwen3.7-plus",
   "default_small_model_id": "deepseek-v4-flash",

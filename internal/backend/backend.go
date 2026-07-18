@@ -13,14 +13,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/app"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/csync"
-	"github.com/charmbracelet/nextcode/internal/db"
-	"github.com/charmbracelet/nextcode/internal/proto"
-	"github.com/charmbracelet/nextcode/internal/skills"
-	"github.com/charmbracelet/nextcode/internal/ui/util"
-	"github.com/charmbracelet/nextcode/internal/version"
+	"github.com/sauravmarvani/nextcode/internal/app"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/db"
+	"github.com/sauravmarvani/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/skills"
+	"github.com/sauravmarvani/nextcode/internal/ui/util"
+	"github.com/sauravmarvani/nextcode/internal/version"
 	"github.com/google/uuid"
 )
 

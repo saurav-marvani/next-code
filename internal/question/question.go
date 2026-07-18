@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/charmbracelet/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
 	"github.com/google/uuid"
 )
 

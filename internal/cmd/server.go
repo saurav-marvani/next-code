@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/config"
-	nextcodelog "github.com/charmbracelet/nextcode/internal/log"
-	"github.com/charmbracelet/nextcode/internal/server"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	nextcodelog "github.com/sauravmarvani/nextcode/internal/log"
+	"github.com/sauravmarvani/nextcode/internal/server"
 	"github.com/charmbracelet/x/term"
 	"github.com/spf13/cobra"
 )

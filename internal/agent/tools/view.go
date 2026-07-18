@@ -17,11 +17,11 @@ import (
 	"unicode/utf8"
 
 	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/filepathext"
-	"github.com/charmbracelet/nextcode/internal/filetracker"
-	"github.com/charmbracelet/nextcode/internal/lsp"
-	"github.com/charmbracelet/nextcode/internal/permission"
-	"github.com/charmbracelet/nextcode/internal/skills"
+	"github.com/sauravmarvani/nextcode/internal/filepathext"
+	"github.com/sauravmarvani/nextcode/internal/filetracker"
+	"github.com/sauravmarvani/nextcode/internal/lsp"
+	"github.com/sauravmarvani/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/skills"
 )
 
 //go:embed view.md.tpl

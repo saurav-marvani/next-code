@@ -7,9 +7,9 @@ import (
 
 	"charm.land/fantasy"
 
-	"github.com/charmbracelet/nextcode/internal/agent/prompt"
-	"github.com/charmbracelet/nextcode/internal/agent/tools"
-	"github.com/charmbracelet/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/agent/prompt"
+	"github.com/sauravmarvani/nextcode/internal/agent/tools"
+	"github.com/sauravmarvani/nextcode/internal/config"
 )
 
 //go:embed templates/agent_tool.md

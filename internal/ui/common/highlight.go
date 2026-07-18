@@ -6,8 +6,8 @@ import (
 
 	"github.com/alecthomas/chroma/v2/formatters"
 	"github.com/alecthomas/chroma/v2/lexers"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
-	"github.com/charmbracelet/nextcode/internal/ui/xchroma"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
+	"github.com/sauravmarvani/nextcode/internal/ui/xchroma"
 )
 
 // SyntaxHighlight applies syntax highlighting to the given source code based

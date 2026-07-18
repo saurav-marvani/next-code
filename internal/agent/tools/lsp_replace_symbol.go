@@ -9,10 +9,10 @@ import (
 	"strings"
 
 	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/filetracker"
-	"github.com/charmbracelet/nextcode/internal/history"
-	"github.com/charmbracelet/nextcode/internal/lsp"
-	"github.com/charmbracelet/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/filetracker"
+	"github.com/sauravmarvani/nextcode/internal/history"
+	"github.com/sauravmarvani/nextcode/internal/lsp"
+	"github.com/sauravmarvani/nextcode/internal/permission"
 	"github.com/charmbracelet/x/powernap/pkg/lsp/protocol"
 )
 

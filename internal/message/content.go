@@ -13,7 +13,7 @@ import (
 	"charm.land/fantasy/providers/anthropic"
 	"charm.land/fantasy/providers/google"
 	"charm.land/fantasy/providers/openai"
-	"github.com/charmbracelet/nextcode/internal/stringext"
+	"github.com/sauravmarvani/nextcode/internal/stringext"
 	"github.com/charmbracelet/x/ansi"
 )
 

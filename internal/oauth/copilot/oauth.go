@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/oauth"
+	"github.com/sauravmarvani/nextcode/internal/oauth"
 )
 
 const (

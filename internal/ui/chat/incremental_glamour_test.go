@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"charm.land/glamour/v2"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 	"github.com/stretchr/testify/require"
 )
 

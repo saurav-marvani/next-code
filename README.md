@@ -2,8 +2,8 @@
 
 <p align="center">
     <a href="https://stuff.charm.sh/nextcode/charm-nextcode.png"><img width="450" alt="Charm NextCode Logo" src="https://github.com/user-attachments/assets/cf8ca3ce-8b02-43f0-9d0f-5a331488da4b" /></a><br />
-    <a href="https://github.com/charmbracelet/nextcode/releases"><img src="https://img.shields.io/github/release/charmbracelet/nextcode" alt="Latest Release"></a>
-    <a href="https://github.com/charmbracelet/nextcode/actions"><img src="https://github.com/charmbracelet/nextcode/actions/workflows/build.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://github.com/sauravmarvani/nextcode/releases"><img src="https://img.shields.io/github/release/sauravmarvani/nextcode" alt="Latest Release"></a>
+    <a href="https://github.com/sauravmarvani/nextcode/actions"><img src="https://github.com/sauravmarvani/nextcode/actions/workflows/build.yml/badge.svg" alt="Build Status"></a>
 </p>
 
 <p align="center">Your new coding bestie, now available in your favourite terminal.<br />Your tools, your code, and your workflows, wired into your LLM of choice.</p>
@@ -19,7 +19,7 @@
 - **LSP-Enhanced:** NextCode uses LSPs for additional context, just like you do
 - **Extensible:** add capabilities via MCPs (`http`, `stdio`, and `sse`)
 - **Works Everywhere:** first-class support in every terminal on macOS, Linux, Windows (PowerShell and WSL), Android, FreeBSD, OpenBSD, and NetBSD
-- **Industrial Grade:** built on the Charm ecosystem, powering 25k+ applications, from leading open source projects to business-critical infrastructure
+- **Industrial Grade:** built with modern Go and proven AI patterns, powering developer productivity across all platforms
 
 ## Installation
 
@@ -27,10 +27,10 @@ Use a package manager:
 
 ```bash
 # Homebrew
-brew install charmbracelet/tap/nextcode
+brew install sauravmarvani/tap/nextcode
 
 # NPM
-npm install -g @charmland/nextcode
+npm install -g @nextcode/cli
 
 # Arch Linux (btw)
 yay -S nextcode-bin
@@ -46,17 +46,17 @@ Windows users:
 
 ```bash
 # Winget
-winget install charmbracelet.nextcode
+winget install sauravmarvani.nextcode
 
 # Scoop
-scoop bucket add charm https://github.com/charmbracelet/scoop-bucket.git
+scoop bucket add nextcode https://github.com/sauravmarvani/scoop-bucket.git
 scoop install nextcode
 ```
 
 <details>
 <summary><strong>Nix (NUR)</strong></summary>
 
-NextCode is available via the official Charm [NUR](https://github.com/nix-community/NUR) in `nur.repos.charmbracelet.nextcode`, which is the most up-to-date way to get NextCode in Nix.
+NextCode is available via the official NextCode [NUR](https://github.com/nix-community/NUR) in `nur.repos.nextcode.nextcode`, which is the most up-to-date way to get NextCode in Nix.
 
 You can also try out NextCode via the NUR with `nix-shell`:
 
@@ -66,7 +66,7 @@ nix-channel --add https://github.com/nix-community/NUR/archive/main.tar.gz nur
 nix-channel --update
 
 # Get NextCode in a Nix shell.
-nix-shell -p '(import <nur> { pkgs = import <nixpkgs> {}; }).repos.charmbracelet.nextcode'
+nix-shell -p '(import <nur> { pkgs = import <nixpkgs> {}; }).repos.nextcode.nextcode'
 ```
 
 ### NixOS & Home Manager Module Usage via NUR
@@ -86,7 +86,7 @@ You can use these modules directly in your flake by importing them from NUR. Sin
       system = "x86_64-linux";
       modules = [
         nur.modules.nixos.default
-        nur.repos.charmbracelet.modules.nextcode
+        nur.repos.nextcode.modules.nextcode
         {
           programs.nextcode = {
             enable = true;
@@ -131,8 +131,8 @@ You can use these modules directly in your flake by importing them from NUR. Sin
 
 ```bash
 sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
-echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
+curl -fsSL https://repo.nextcode.io/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nextcode.gpg
+echo "deb [signed-by=/etc/apt/keyrings/nextcode.gpg] https://repo.nextcode.io/apt/ * *" | sudo tee /etc/apt/sources.list.d/nextcode.list
 sudo apt update && sudo apt install nextcode
 ```
 
@@ -142,12 +142,12 @@ sudo apt update && sudo apt install nextcode
 <summary><strong>Fedora/RHEL</strong></summary>
 
 ```bash
-echo '[charm]
-name=Charm
-baseurl=https://repo.charm.sh/yum/
+echo '[nextcode]
+name=NextCode
+baseurl=https://repo.nextcode.io/yum/
 enabled=1
 gpgcheck=1
-gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
+gpgkey=https://repo.nextcode.io/yum/gpg.key' | sudo tee /etc/yum.repos.d/nextcode.repo
 sudo yum install nextcode
 ```
 
@@ -158,12 +158,12 @@ Or, download it:
 - [Packages][releases] are available in Debian and RPM formats
 - [Binaries][releases] are available for Linux, macOS, Windows, FreeBSD, OpenBSD, and NetBSD
 
-[releases]: https://github.com/charmbracelet/nextcode/releases
+[releases]: https://github.com/sauravmarvani/nextcode/releases
 
 Or just install it with Go:
 
 ```
-go install github.com/charmbracelet/nextcode@latest
+go install github.com/sauravmarvani/nextcode@latest
 ```
 
 > [!WARNING]
@@ -176,11 +176,11 @@ go install github.com/charmbracelet/nextcode@latest
 The quickest way to get started is to choose a [Hyper][hyper] model from model
 picker. Follow the steps to authenticate and you'll be good to go.
 
-[Hyper], from Charm, is the official NextCode provider. It’s subscription-based,
+[Hyper][hyper] is the official NextCode provider. It’s subscription-based,
 with a free tier, and optimized for NextCode. It’s privacy focused, with zero data
-retention (ZDR) is and designed to comply with GDPR. [More on Hyper][hyper].
+retention (ZDR) and designed to comply with GDPR. [More on Hyper][hyper].
 
-<p><a href="https://hyper.charm.land"><img width="340" height="200" alt="Charm Hyper" src="https://github.com/user-attachments/assets/50875289-7992-454d-9f14-9f790413fb5e" /></a></p>
+<p><a href="https://hyper.nextcode.io"><img width="340" height="200" alt="NextCode Hyper" src="https://github.com/user-attachments/assets/50875289-7992-454d-9f14-9f790413fb5e" /></a></p>
 
 ## API Keys
 
@@ -192,7 +192,7 @@ That said, you can also set environment variables for preferred providers:
 
 | Environment Variable        | Provider                                           |
 | --------------------------- | -------------------------------------------------- |
-| `HYPER_API_KEY`             | [Charm Hyper][hyper]                               |
+| `HYPER_API_KEY`             | [NextCode Hyper][hyper]                            |
 | `ANTHROPIC_API_KEY`         | Anthropic                                          |
 | `OPENAI_API_KEY`            | OpenAI                                             |
 | `VERCEL_API_KEY`            | Vercel AI Gateway                                  |
@@ -221,7 +221,7 @@ That said, you can also set environment variables for preferred providers:
 | `AZURE_OPENAI_API_VERSION`  | Azure OpenAI models                                |
 | `MOONSHOT_API_KEY`          | Moonshot                                           |
 
-[hyper]: https://hyper.charm.land
+[hyper]: https://hyper.nextcode.io
 
 Also note that NextCode can support nearly any provider, including
 [Local Models](#local-models). For more info see
@@ -231,9 +231,9 @@ Also note that NextCode can support nearly any provider, including
 
 Is there a provider you’d like to see in NextCode? Is there an existing model that needs an update?
 
-NextCode’s default model listing is managed in [Catwalk](https://github.com/charmbracelet/catwalk), a community-supported, open source repository of NextCode-compatible models, and you’re welcome to contribute.
+NextCode’s default model listing is managed in [Catwalk](https://github.com/sauravmarvani/catwalk), a community-supported, open source repository of NextCode-compatible models, and you’re welcome to contribute.
 
-<a href="https://github.com/charmbracelet/catwalk"><img width="174" height="174" alt="Catwalk Badge" src="https://github.com/user-attachments/assets/95b49515-fe82-4409-b10d-5beb0873787d" /></a>
+<a href="https://github.com/sauravmarvani/catwalk"><img width="174" height="174" alt="Catwalk Badge" src="https://github.com/user-attachments/assets/95b49515-fe82-4409-b10d-5beb0873787d" /></a>
 
 ## Configuration
 
@@ -282,7 +282,7 @@ like you would. LSPs can be added manually like so:
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "lsp": {
     "go": {
       "command": "gopls",
@@ -336,7 +336,7 @@ which do expand.
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "mcp": {
     "filesystem": {
       "type": "stdio",
@@ -428,7 +428,7 @@ configuration:
 
 ```jsonc
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "options": {
     "global_context_paths": [
       "~/path/to/custom/context/file.md",
@@ -456,7 +456,7 @@ permissions. Use this with care.
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "permissions": {
     "allowed_tools": [
       "view",
@@ -480,7 +480,7 @@ completely hidden from the agent.
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "options": {
     "disabled_tools": ["bash", "sourcegraph"]
   }
@@ -497,7 +497,7 @@ from the agent, including builtin skills and skills discovered from disk.
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "options": {
     "disabled_skills": ["nextcode-config"]
   }
@@ -533,7 +533,7 @@ relative paths:
 
 ```jsonc
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "options": {
     "skills_paths": [
       "~/.config/nextcode/skills", // Windows: "%LOCALAPPDATA%\\nextcode\\skills",
@@ -600,7 +600,7 @@ focused _and_ your terminal supports reporting the focus state.
 
 ```jsonc
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "options": {
     "disable_notifications": false, // default
   },
@@ -620,7 +620,7 @@ name and location with the `initialize_as` option:
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "options": {
     "initialize_as": "AGENTS.md"
   }
@@ -640,7 +640,7 @@ it creates. You can customize this behavior with the `attribution` option:
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "options": {
     "attribution": {
       "trailer_style": "co-authored-by",
@@ -677,7 +677,7 @@ API. Don't forget to set `DEEPSEEK_API_KEY` in your environment.
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "providers": {
     "deepseek": {
       "type": "openai-compat",
@@ -706,7 +706,7 @@ Custom Anthropic-compatible providers follow this format:
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "providers": {
     "custom-anthropic": {
       "type": "anthropic",
@@ -755,7 +755,7 @@ To add specific models to the configuration, configure as such:
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "providers": {
     "vertexai": {
       "models": [
@@ -862,7 +862,7 @@ config:
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "options": {
     "debug": true,
     "debug_lsp": true
@@ -873,7 +873,7 @@ config:
 ## Provider Auto-Updates
 
 By default, NextCode automatically checks for the latest and greatest list of
-providers and models from [Catwalk](https://github.com/charmbracelet/catwalk),
+providers and models from [Catwalk](https://github.com/sauravmarvani/catwalk),
 the open source NextCode provider database. This means that when new providers and
 models are available, or when model metadata changes, NextCode automatically
 updates your local configuration.
@@ -889,7 +889,7 @@ your `nextcode.json` config:
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  ""$schema": "https://nextcode.io/schema/nextcode.json",
   "options": {
     "disable_provider_auto_update": true
   }
@@ -990,9 +990,9 @@ We’d love to hear your thoughts on this project. Need help? We gotchu. You can
 
 ---
 
-Part of [Charm](https://charm.land).
+Part of NextCode(https://charm.land).
 
 <a href="https://charm.land/"><img alt="The Charm logo" width="400" src="https://stuff.charm.sh/charm-banner-softy.jpg" /></a>
 
 <!--prettier-ignore-->
-Charm热爱开源 • Charm loves open source
+NextCode loves open source, like Charm loves open source

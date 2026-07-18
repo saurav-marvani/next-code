@@ -10,13 +10,13 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/nextcode/internal/diff"
-	"github.com/charmbracelet/nextcode/internal/fsext"
-	"github.com/charmbracelet/nextcode/internal/history"
-	"github.com/charmbracelet/nextcode/internal/session"
-	"github.com/charmbracelet/nextcode/internal/ui/common"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
-	"github.com/charmbracelet/nextcode/internal/ui/util"
+	"github.com/sauravmarvani/nextcode/internal/diff"
+	"github.com/sauravmarvani/nextcode/internal/fsext"
+	"github.com/sauravmarvani/nextcode/internal/history"
+	"github.com/sauravmarvani/nextcode/internal/session"
+	"github.com/sauravmarvani/nextcode/internal/ui/common"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
+	"github.com/sauravmarvani/nextcode/internal/ui/util"
 	"github.com/charmbracelet/x/ansi"
 )
 

@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/lock"
-	"github.com/charmbracelet/nextcode/internal/version"
+	"github.com/sauravmarvani/nextcode/internal/lock"
+	"github.com/sauravmarvani/nextcode/internal/version"
 )
 
 // ErrDataDirLocked is returned by Connect when the data directory is

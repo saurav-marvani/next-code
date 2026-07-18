@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/charmbracelet/nextcode/internal/home"
+	"github.com/sauravmarvani/nextcode/internal/home"
 	"github.com/stretchr/testify/require"
 )
 

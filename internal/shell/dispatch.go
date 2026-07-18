@@ -14,7 +14,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/charmbracelet/nextcode/internal/filepathext"
+	"github.com/sauravmarvani/nextcode/internal/filepathext"
 	"mvdan.cc/sh/v3/expand"
 	"mvdan.cc/sh/v3/interp"
 	"mvdan.cc/sh/v3/syntax"

@@ -6,8 +6,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/charmbracelet/nextcode/internal/home"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/home"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
 )
 
 // Manager owns per-workspace skill discovery state: the latest discovery

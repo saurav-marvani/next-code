@@ -6,7 +6,7 @@ import (
 	"testing/synctest"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/db"
+	"github.com/sauravmarvani/nextcode/internal/db"
 	"github.com/stretchr/testify/require"
 )
 

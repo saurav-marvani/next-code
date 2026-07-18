@@ -6,7 +6,7 @@
 //	@contact.name	Charm
 //	@contact.url	https://charm.sh
 //	@license.name	MIT
-//	@license.url	https://github.com/charmbracelet/nextcode/blob/main/LICENSE
+//	@license.url	https://github.com/sauravmarvani/nextcode/blob/main/LICENSE
 //	@BasePath		/v1
 package main
 
@@ -16,8 +16,8 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	"github.com/charmbracelet/nextcode/internal/cmd"
-	_ "github.com/charmbracelet/nextcode/internal/dns"
+	"github.com/sauravmarvani/nextcode/internal/cmd"
+	_ "github.com/sauravmarvani/nextcode/internal/dns"
 	_ "github.com/joho/godotenv/autoload"
 )
 

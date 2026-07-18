@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/charmbracelet/nextcode/internal/projects"
+	"github.com/sauravmarvani/nextcode/internal/projects"
 	"github.com/stretchr/testify/require"
 )
 

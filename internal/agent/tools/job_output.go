@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/shell"
+	"github.com/sauravmarvani/nextcode/internal/shell"
 )
 
 const (

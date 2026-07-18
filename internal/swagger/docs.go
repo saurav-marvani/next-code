@@ -15,7 +15,7 @@ const docTemplate = `{
         },
         "license": {
             "name": "MIT",
-            "url": "https://github.com/charmbracelet/nextcode/blob/main/LICENSE"
+            "url": "https://github.com/sauravmarvani/nextcode/blob/main/LICENSE"
         },
         "version": "{{.Version}}"
     },

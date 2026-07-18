@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/question"
+	"github.com/sauravmarvani/nextcode/internal/question"
 )
 
 const QuestionToolName = "question"

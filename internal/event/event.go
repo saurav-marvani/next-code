@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/version"
+	"github.com/sauravmarvani/nextcode/internal/version"
 	"github.com/posthog/posthog-go"
 )
 

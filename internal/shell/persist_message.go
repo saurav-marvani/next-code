@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/charmbracelet/nextcode/internal/message"
+	"github.com/sauravmarvani/nextcode/internal/message"
 )
 
 // PersistOutput stores a bang-mode shell command result as a user message.

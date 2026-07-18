@@ -5,12 +5,12 @@ import (
 	"errors"
 	"os"
 
-	"github.com/charmbracelet/nextcode/internal/agent"
-	"github.com/charmbracelet/nextcode/internal/agent/notify"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/proto"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
-	"github.com/charmbracelet/nextcode/internal/shell"
+	"github.com/sauravmarvani/nextcode/internal/agent"
+	"github.com/sauravmarvani/nextcode/internal/agent/notify"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/shell"
 )
 
 // SendMessage validates and accepts a prompt for the workspace's agent,

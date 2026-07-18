@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/event"
+	"github.com/sauravmarvani/nextcode/internal/event"
 )
 
 func (a *sessionAgent) eventPromptSent(sessionID string) {
