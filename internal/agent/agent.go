@@ -26,26 +26,26 @@ import (
 	"sync/atomic"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"charm.land/fantasy"
-	"charm.land/fantasy/providers/anthropic"
-	"charm.land/fantasy/providers/bedrock"
-	"charm.land/fantasy/providers/google"
-	"charm.land/fantasy/providers/openai"
-	"charm.land/fantasy/providers/openrouter"
-	"charm.land/fantasy/providers/vercel"
-	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/nextcode/internal/agent/hyper"
-	"github.com/charmbracelet/nextcode/internal/agent/notify"
-	"github.com/charmbracelet/nextcode/internal/agent/tools"
-	"github.com/charmbracelet/nextcode/internal/agent/tools/mcp"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/csync"
-	"github.com/charmbracelet/nextcode/internal/message"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
-	"github.com/charmbracelet/nextcode/internal/session"
-	"github.com/charmbracelet/nextcode/internal/stringext"
-	"github.com/charmbracelet/nextcode/internal/version"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"nextcode.io/fantasy"
+	"nextcode.io/fantasy/providers/anthropic"
+	"nextcode.io/fantasy/providers/bedrock"
+	"nextcode.io/fantasy/providers/google"
+	"nextcode.io/fantasy/providers/openai"
+	"nextcode.io/fantasy/providers/openrouter"
+	"nextcode.io/fantasy/providers/vercel"
+	"nextcode.io/lipgloss/v2"
+	"github.com/sauravmarvani/nextcode/internal/agent/hyper"
+	"github.com/sauravmarvani/nextcode/internal/agent/notify"
+	"github.com/sauravmarvani/nextcode/internal/agent/tools"
+	"github.com/sauravmarvani/nextcode/internal/agent/tools/mcp"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/message"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/session"
+	"github.com/sauravmarvani/nextcode/internal/stringext"
+	"github.com/sauravmarvani/nextcode/internal/version"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/charmbracelet/x/exp/charmtone"
 )
@@ -59,7 +59,7 @@ const (
 	smallContextWindowRatio     = 0.2
 )
 
-var userAgent = fmt.Sprintf("Charm-NextCode/%s (https://charm.land/nextcode)", version.Version)
+var userAgent = fmt.Sprintf("NextCode/%s (https://nextcode.io)", version.Version)
 
 //go:embed templates/title.md
 var titlePrompt []byte

@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/csync"
-	"github.com/charmbracelet/nextcode/internal/lsp"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/lsp"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
 )
 
 // LSPEventType represents the type of LSP event

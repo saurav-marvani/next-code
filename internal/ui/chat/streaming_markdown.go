@@ -3,8 +3,8 @@ package chat
 import (
 	"strings"
 
-	"charm.land/glamour/v2"
-	"github.com/charmbracelet/nextcode/internal/ui/common"
+	"nextcode.io/glamour/v2"
+	"github.com/sauravmarvani/nextcode/internal/ui/common"
 )
 
 // streamingMarkdown caches a "stable prefix" glamour render so each

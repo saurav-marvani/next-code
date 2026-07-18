@@ -6,11 +6,11 @@ import (
 	"image"
 	"strings"
 
-	"charm.land/lipgloss/v2"
-	mcp "github.com/charmbracelet/nextcode/internal/agent/tools/mcp"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/ui/common"
-	"github.com/charmbracelet/nextcode/internal/ui/logo"
+	"nextcode.io/lipgloss/v2"
+	mcp "github.com/sauravmarvani/nextcode/internal/agent/tools/mcp"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/ui/common"
+	"github.com/sauravmarvani/nextcode/internal/ui/logo"
 	uv "github.com/charmbracelet/ultraviolet"
 	"github.com/charmbracelet/ultraviolet/layout"
 )

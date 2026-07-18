@@ -5,9 +5,9 @@ import (
 	"errors"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/lsp"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/lsp"
 )
 
 // Workspace represents a running app.App workspace with its associated

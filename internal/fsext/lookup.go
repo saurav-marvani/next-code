@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/charmbracelet/nextcode/internal/home"
+	"github.com/sauravmarvani/nextcode/internal/home"
 )
 
 // Lookup searches for a target files or directories starting from dir

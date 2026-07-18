@@ -9,7 +9,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/charmbracelet/nextcode/internal/lsp"
+	"github.com/sauravmarvani/nextcode/internal/lsp"
 	"github.com/charmbracelet/x/powernap/pkg/lsp/protocol"
 )
 

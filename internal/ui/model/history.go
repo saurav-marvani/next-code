@@ -5,9 +5,9 @@ import (
 	"log/slog"
 	"strings"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 
-	"github.com/charmbracelet/nextcode/internal/message"
+	"github.com/sauravmarvani/nextcode/internal/message"
 )
 
 // promptHistoryLoadedMsg is sent when prompt history is loaded.

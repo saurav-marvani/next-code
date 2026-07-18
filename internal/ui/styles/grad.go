@@ -5,7 +5,7 @@ import (
 	"image/color"
 	"strings"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/rivo/uniseg"
 )
 

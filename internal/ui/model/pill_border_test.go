@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/charmbracelet/nextcode/internal/session"
+	"github.com/sauravmarvani/nextcode/internal/session"
 )
 
 // roundedBorderRunes are chars that only appear when a pill has a visible

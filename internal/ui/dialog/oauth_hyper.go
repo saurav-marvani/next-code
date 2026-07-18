@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	tea "charm.land/bubbletea/v2"
-	"charm.land/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/oauth/hyper"
-	"github.com/charmbracelet/nextcode/internal/ui/common"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/oauth/hyper"
+	"github.com/sauravmarvani/nextcode/internal/ui/common"
 )
 
 func NewOAuthHyper(

@@ -5,13 +5,13 @@ import (
 	"testing"
 	"time"
 
-	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/agent"
-	"github.com/charmbracelet/nextcode/internal/agent/agenttest"
-	"github.com/charmbracelet/nextcode/internal/db"
-	"github.com/charmbracelet/nextcode/internal/message"
-	"github.com/charmbracelet/nextcode/internal/proto"
-	"github.com/charmbracelet/nextcode/internal/session"
+	"nextcode.io/fantasy"
+	"github.com/sauravmarvani/nextcode/internal/agent"
+	"github.com/sauravmarvani/nextcode/internal/agent/agenttest"
+	"github.com/sauravmarvani/nextcode/internal/db"
+	"github.com/sauravmarvani/nextcode/internal/message"
+	"github.com/sauravmarvani/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/session"
 	"github.com/stretchr/testify/require"
 )
 

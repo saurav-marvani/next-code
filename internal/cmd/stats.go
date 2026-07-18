@@ -17,10 +17,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/db"
-	"github.com/charmbracelet/nextcode/internal/event"
-	"github.com/charmbracelet/nextcode/internal/projects"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/db"
+	"github.com/sauravmarvani/nextcode/internal/event"
+	"github.com/sauravmarvani/nextcode/internal/projects"
 	"github.com/pkg/browser"
 	"github.com/spf13/cobra"
 )

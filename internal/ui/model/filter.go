@@ -3,8 +3,8 @@ package model
 import (
 	"time"
 
-	tea "charm.land/bubbletea/v2"
-	"github.com/charmbracelet/nextcode/internal/ui/common"
+	tea "nextcode.io/bubbletea/v2"
+	"github.com/sauravmarvani/nextcode/internal/ui/common"
 )
 
 // inputFilterInterval targets roughly one filtered sample per 60 Hz frame.

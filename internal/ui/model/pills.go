@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	tea "charm.land/bubbletea/v2"
-	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/nextcode/internal/session"
-	"github.com/charmbracelet/nextcode/internal/ui/chat"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/lipgloss/v2"
+	"github.com/sauravmarvani/nextcode/internal/session"
+	"github.com/sauravmarvani/nextcode/internal/ui/chat"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 	"github.com/charmbracelet/x/ansi"
 )
 

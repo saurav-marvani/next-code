@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 )
 
 //go:embed web_fetch.md.tpl

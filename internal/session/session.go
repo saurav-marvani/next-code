@@ -9,9 +9,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/charmbracelet/nextcode/internal/db"
-	"github.com/charmbracelet/nextcode/internal/event"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/db"
+	"github.com/sauravmarvani/nextcode/internal/event"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
 	"github.com/google/uuid"
 	"github.com/zeebo/xxh3"
 )

@@ -10,15 +10,15 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/diff"
-	"github.com/charmbracelet/nextcode/internal/filepathext"
-	"github.com/charmbracelet/nextcode/internal/filetracker"
-	"github.com/charmbracelet/nextcode/internal/fsext"
-	"github.com/charmbracelet/nextcode/internal/history"
+	"nextcode.io/fantasy"
+	"github.com/sauravmarvani/nextcode/internal/diff"
+	"github.com/sauravmarvani/nextcode/internal/filepathext"
+	"github.com/sauravmarvani/nextcode/internal/filetracker"
+	"github.com/sauravmarvani/nextcode/internal/fsext"
+	"github.com/sauravmarvani/nextcode/internal/history"
 
-	"github.com/charmbracelet/nextcode/internal/lsp"
-	"github.com/charmbracelet/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/lsp"
+	"github.com/sauravmarvani/nextcode/internal/permission"
 )
 
 type EditParams struct {

@@ -9,13 +9,13 @@ import (
 	"os"
 	"strings"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 
-	"github.com/charmbracelet/nextcode/internal/filetracker"
-	"github.com/charmbracelet/nextcode/internal/history"
-	"github.com/charmbracelet/nextcode/internal/lsp"
-	lsputil "github.com/charmbracelet/nextcode/internal/lsp/util"
-	"github.com/charmbracelet/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/filetracker"
+	"github.com/sauravmarvani/nextcode/internal/history"
+	"github.com/sauravmarvani/nextcode/internal/lsp"
+	lsputil "github.com/sauravmarvani/nextcode/internal/lsp/util"
+	"github.com/sauravmarvani/nextcode/internal/permission"
 )
 
 type RenameParams struct {

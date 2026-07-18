@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/nextcode/internal/agent/tools/mcp"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/ui/common"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"nextcode.io/lipgloss/v2"
+	"github.com/sauravmarvani/nextcode/internal/agent/tools/mcp"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/ui/common"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 )
 
 // mcpInfo renders the MCP status section showing active MCP clients and their

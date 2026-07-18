@@ -5,13 +5,13 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/bubbles/v2/key"
-	tea "charm.land/bubbletea/v2"
-	"charm.land/lipgloss/v2"
+	"nextcode.io/bubbles/v2/key"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/lipgloss/v2"
 
-	"github.com/charmbracelet/nextcode/internal/home"
-	"github.com/charmbracelet/nextcode/internal/ui/common"
-	"github.com/charmbracelet/nextcode/internal/ui/util"
+	"github.com/sauravmarvani/nextcode/internal/home"
+	"github.com/sauravmarvani/nextcode/internal/ui/common"
+	"github.com/sauravmarvani/nextcode/internal/ui/util"
 )
 
 // markProjectInitializedCmd marks the current project as initialized in the config.

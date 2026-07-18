@@ -4,11 +4,11 @@ import (
 	"image"
 	"strings"
 
-	"charm.land/bubbles/v2/key"
-	"charm.land/bubbles/v2/textarea"
-	tea "charm.land/bubbletea/v2"
-	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"nextcode.io/bubbles/v2/key"
+	"nextcode.io/bubbles/v2/textarea"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/lipgloss/v2"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 	uv "github.com/charmbracelet/ultraviolet"
 )
 

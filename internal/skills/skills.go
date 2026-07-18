@@ -15,7 +15,7 @@ import (
 	"sync"
 
 	"github.com/charlievieth/fastwalk"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
 	"gopkg.in/yaml.v3"
 )
 

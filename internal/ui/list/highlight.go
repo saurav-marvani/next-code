@@ -4,8 +4,8 @@ import (
 	"image"
 	"strings"
 
-	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/nextcode/internal/stringext"
+	"nextcode.io/lipgloss/v2"
+	"github.com/sauravmarvani/nextcode/internal/stringext"
 	uv "github.com/charmbracelet/ultraviolet"
 )
 

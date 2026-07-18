@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	tea "charm.land/bubbletea/v2"
-	"github.com/charmbracelet/nextcode/internal/ui/anim"
+	tea "nextcode.io/bubbletea/v2"
+	"github.com/sauravmarvani/nextcode/internal/ui/anim"
 	"github.com/charmbracelet/x/ansi"
 )
 

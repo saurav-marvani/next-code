@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log/slog"
 
-	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/nextcode/internal/config"
+	"nextcode.io/lipgloss/v2"
+	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/charmbracelet/x/exp/charmtone"
 	"github.com/spf13/cobra"
 )

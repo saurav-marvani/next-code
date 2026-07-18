@@ -7,11 +7,11 @@ import (
 	"testing"
 	"unicode/utf8"
 
-	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/permission"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
-	"github.com/charmbracelet/nextcode/internal/shell"
+	"nextcode.io/fantasy"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/shell"
 	"github.com/stretchr/testify/require"
 )
 

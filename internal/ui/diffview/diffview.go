@@ -6,12 +6,12 @@ import (
 	"strconv"
 	"strings"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/alecthomas/chroma/v2"
 	"github.com/alecthomas/chroma/v2/lexers"
 	"github.com/aymanbagabas/go-udiff"
-	"github.com/charmbracelet/nextcode/internal/ansiext"
-	"github.com/charmbracelet/nextcode/internal/ui/xchroma"
+	"github.com/sauravmarvani/nextcode/internal/ansiext"
+	"github.com/sauravmarvani/nextcode/internal/ui/xchroma"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/zeebo/xxh3"
 )

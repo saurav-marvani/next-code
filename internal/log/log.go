@@ -10,7 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/event"
+	"github.com/sauravmarvani/nextcode/internal/event"
 	"github.com/charmbracelet/x/term"
 	"gopkg.in/natefinch/lumberjack.v2"
 )

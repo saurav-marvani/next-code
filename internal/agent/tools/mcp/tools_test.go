@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"testing"
 
-	"github.com/charmbracelet/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/stretchr/testify/require"
 )
 

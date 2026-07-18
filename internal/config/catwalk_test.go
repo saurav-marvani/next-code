@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/catwalk"
 	"github.com/stretchr/testify/require"
 )
 

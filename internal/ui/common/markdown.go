@@ -4,10 +4,10 @@ import (
 	"image/color"
 	"sync"
 
-	"charm.land/glamour/v2"
+	"nextcode.io/glamour/v2"
 	"github.com/alecthomas/chroma/v2/formatters"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
-	"github.com/charmbracelet/nextcode/internal/ui/xchroma"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
+	"github.com/sauravmarvani/nextcode/internal/ui/xchroma"
 )
 
 const formatterName = "nextcode"

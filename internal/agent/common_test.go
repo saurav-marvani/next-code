@@ -8,21 +8,21 @@ import (
 	"testing"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"charm.land/fantasy"
-	"charm.land/fantasy/providers/openaicompat"
-	"charm.land/x/vcr"
-	"github.com/charmbracelet/nextcode/internal/agent/prompt"
-	"github.com/charmbracelet/nextcode/internal/agent/tools"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/csync"
-	"github.com/charmbracelet/nextcode/internal/db"
-	"github.com/charmbracelet/nextcode/internal/filetracker"
-	"github.com/charmbracelet/nextcode/internal/history"
-	"github.com/charmbracelet/nextcode/internal/lsp"
-	"github.com/charmbracelet/nextcode/internal/message"
-	"github.com/charmbracelet/nextcode/internal/permission"
-	"github.com/charmbracelet/nextcode/internal/session"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"nextcode.io/fantasy"
+	"nextcode.io/fantasy/providers/openaicompat"
+	"nextcode.io/x/vcr"
+	"github.com/sauravmarvani/nextcode/internal/agent/prompt"
+	"github.com/sauravmarvani/nextcode/internal/agent/tools"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/db"
+	"github.com/sauravmarvani/nextcode/internal/filetracker"
+	"github.com/sauravmarvani/nextcode/internal/history"
+	"github.com/sauravmarvani/nextcode/internal/lsp"
+	"github.com/sauravmarvani/nextcode/internal/message"
+	"github.com/sauravmarvani/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/session"
 	"github.com/stretchr/testify/require"
 
 	_ "github.com/joho/godotenv/autoload"
@@ -50,7 +50,7 @@ type modelPair struct {
 func hyperBuilder(model string) builderFunc {
 	return func(t *testing.T, r *vcr.Recorder) (fantasy.LanguageModel, error) {
 		provider, err := openaicompat.New(
-			openaicompat.WithBaseURL("https://hyper.charm.land/v1"),
+			openaicompat.WithBaseURL("https://hyper.nextcode.io/v1"),
 			openaicompat.WithAPIKey(os.Getenv("NEXTCODE_HYPER_API_KEY")),
 			openaicompat.WithHTTPClient(&http.Client{Transport: r}),
 		)

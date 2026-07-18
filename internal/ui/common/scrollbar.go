@@ -3,7 +3,7 @@ package common
 import (
 	"strings"
 
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 )
 
 // Scrollbar renders a vertical scrollbar based on content and viewport size.

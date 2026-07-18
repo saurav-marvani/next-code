@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/config"
 )
 
 const projectsFileName = "projects.json"

@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/proto"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
 	"github.com/stretchr/testify/require"
 )
 

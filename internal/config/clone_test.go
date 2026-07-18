@@ -3,7 +3,7 @@ package config
 import (
 	"testing"
 
-	"github.com/charmbracelet/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/csync"
 	"github.com/stretchr/testify/require"
 )
 

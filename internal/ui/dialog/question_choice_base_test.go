@@ -4,9 +4,9 @@ import (
 	"image"
 	"testing"
 
-	tea "charm.land/bubbletea/v2"
-	"github.com/charmbracelet/nextcode/internal/question"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	tea "nextcode.io/bubbletea/v2"
+	"github.com/sauravmarvani/nextcode/internal/question"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 	uv "github.com/charmbracelet/ultraviolet"
 	"github.com/stretchr/testify/require"
 )

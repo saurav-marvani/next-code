@@ -19,21 +19,21 @@ import (
 	"testing"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/nextcode/internal/agent/hyper"
-	"github.com/charmbracelet/nextcode/internal/csync"
-	"github.com/charmbracelet/nextcode/internal/discover"
-	"github.com/charmbracelet/nextcode/internal/env"
-	"github.com/charmbracelet/nextcode/internal/filepathext"
-	"github.com/charmbracelet/nextcode/internal/fsext"
-	"github.com/charmbracelet/nextcode/internal/home"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"github.com/sauravmarvani/nextcode/internal/agent/hyper"
+	"github.com/sauravmarvani/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/discover"
+	"github.com/sauravmarvani/nextcode/internal/env"
+	"github.com/sauravmarvani/nextcode/internal/filepathext"
+	"github.com/sauravmarvani/nextcode/internal/fsext"
+	"github.com/sauravmarvani/nextcode/internal/home"
 	powernapConfig "github.com/charmbracelet/x/powernap/pkg/config"
 	"github.com/qjebbs/go-jsons"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
 )
 
-const defaultCatwalkURL = "https://catwalk.charm.land"
+const defaultCatwalkURL = "https://catwalk.nextcode.io"
 
 // Load loads the configuration from the default paths and returns a
 // ConfigStore that owns both the pure-data Config and all runtime state.

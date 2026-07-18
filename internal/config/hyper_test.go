@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/catwalk"
 	"github.com/stretchr/testify/require"
 )
 
@@ -116,7 +116,7 @@ func TestHyperSync_GetClientError(t *testing.T) {
 
 	provider, err := syncer.Get(t.Context())
 	require.NoError(t, err) // Should fall back to embedded.
-	require.Equal(t, "Charm Hyper", provider.Name)
+	require.Equal(t, "NextCode Hyper", provider.Name)
 	require.Equal(t, catwalk.InferenceProvider("hyper"), provider.ID)
 }
 

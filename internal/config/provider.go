@@ -15,11 +15,11 @@ import (
 	"sync"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"charm.land/catwalk/pkg/embedded"
-	"github.com/charmbracelet/nextcode/internal/agent/hyper"
-	"github.com/charmbracelet/nextcode/internal/csync"
-	"github.com/charmbracelet/nextcode/internal/home"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/embedded"
+	"github.com/sauravmarvani/nextcode/internal/agent/hyper"
+	"github.com/sauravmarvani/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/home"
 	"github.com/charmbracelet/x/etag"
 )
 

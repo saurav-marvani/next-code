@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/csync"
 	"github.com/stretchr/testify/require"
 )
 

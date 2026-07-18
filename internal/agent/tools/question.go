@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"strings"
 
-	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/question"
+	"nextcode.io/fantasy"
+	"github.com/sauravmarvani/nextcode/internal/question"
 )
 
 const QuestionToolName = "question"

@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/charmbracelet/nextcode/internal/backend"
-	"github.com/charmbracelet/nextcode/internal/proto"
-	"github.com/charmbracelet/nextcode/internal/session"
+	"github.com/sauravmarvani/nextcode/internal/backend"
+	"github.com/sauravmarvani/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/session"
 	"github.com/google/uuid"
 )
 

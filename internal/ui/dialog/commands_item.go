@@ -3,9 +3,9 @@ package dialog
 import (
 	"strings"
 
-	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/nextcode/internal/ui/list"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"nextcode.io/lipgloss/v2"
+	"github.com/sauravmarvani/nextcode/internal/ui/list"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/sahilm/fuzzy"
 )

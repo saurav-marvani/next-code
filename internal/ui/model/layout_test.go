@@ -5,11 +5,11 @@ import (
 	"strings"
 	"testing"
 
-	"charm.land/bubbles/v2/textarea"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/session"
-	"github.com/charmbracelet/nextcode/internal/ui/chat"
-	"github.com/charmbracelet/nextcode/internal/ui/common"
+	"nextcode.io/bubbles/v2/textarea"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/session"
+	"github.com/sauravmarvani/nextcode/internal/ui/chat"
+	"github.com/sauravmarvani/nextcode/internal/ui/common"
 )
 
 // testMessageItem is a minimal chat item used to populate the chat list

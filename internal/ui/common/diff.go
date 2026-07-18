@@ -1,8 +1,8 @@
 package common
 
 import (
-	"github.com/charmbracelet/nextcode/internal/ui/diffview"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"github.com/sauravmarvani/nextcode/internal/ui/diffview"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 )
 
 // DiffFormatter returns a diff formatter with the given styles that can be

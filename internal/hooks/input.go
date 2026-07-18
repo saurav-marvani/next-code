@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/charmbracelet/nextcode/internal/shell"
+	"github.com/sauravmarvani/nextcode/internal/shell"
 	"github.com/tidwall/gjson"
 )
 

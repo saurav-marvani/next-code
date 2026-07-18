@@ -16,12 +16,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/csync"
-	"github.com/charmbracelet/nextcode/internal/home"
-	"github.com/charmbracelet/nextcode/internal/permission"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
-	"github.com/charmbracelet/nextcode/internal/version"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/home"
+	"github.com/sauravmarvani/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/version"
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 )
 

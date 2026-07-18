@@ -1,7 +1,7 @@
 package workspace
 
 import (
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 )
 
 // ConsumeEventsForTest runs the event-handling loop on the given

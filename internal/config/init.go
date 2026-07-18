@@ -7,7 +7,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/charmbracelet/nextcode/internal/fsext"
+	"github.com/sauravmarvani/nextcode/internal/fsext"
 )
 
 const (

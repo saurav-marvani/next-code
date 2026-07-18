@@ -3,8 +3,8 @@ package agent
 import (
 	"time"
 
-	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/event"
+	"nextcode.io/fantasy"
+	"github.com/sauravmarvani/nextcode/internal/event"
 )
 
 func (a *sessionAgent) eventPromptSent(sessionID string) {

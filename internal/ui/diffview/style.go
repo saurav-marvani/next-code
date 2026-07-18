@@ -1,7 +1,7 @@
 package diffview
 
 import (
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/charmbracelet/x/exp/charmtone"
 )
 

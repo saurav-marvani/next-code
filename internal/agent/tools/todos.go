@@ -5,8 +5,8 @@ import (
 	_ "embed"
 	"fmt"
 
-	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/session"
+	"nextcode.io/fantasy"
+	"github.com/sauravmarvani/nextcode/internal/session"
 )
 
 //go:embed todos.md

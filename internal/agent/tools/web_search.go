@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 )
 
 //go:embed web_search.md.tpl

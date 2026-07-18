@@ -3,7 +3,7 @@ package logo
 import (
 	"strings"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/MakeNowJust/heredoc"
 	"github.com/charmbracelet/x/exp/slice"
 )

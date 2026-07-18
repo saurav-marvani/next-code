@@ -9,7 +9,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/charmbracelet/nextcode/internal/log"
+	"github.com/sauravmarvani/nextcode/internal/log"
 )
 
 var getRg = sync.OnceValue(func() string {

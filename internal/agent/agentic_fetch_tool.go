@@ -9,11 +9,11 @@ import (
 	"os"
 	"time"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 
-	"github.com/charmbracelet/nextcode/internal/agent/prompt"
-	"github.com/charmbracelet/nextcode/internal/agent/tools"
-	"github.com/charmbracelet/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/agent/prompt"
+	"github.com/sauravmarvani/nextcode/internal/agent/tools"
+	"github.com/sauravmarvani/nextcode/internal/permission"
 )
 
 //go:embed templates/agentic_fetch.md

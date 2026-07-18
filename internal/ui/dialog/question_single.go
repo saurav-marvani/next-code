@@ -6,10 +6,10 @@ import (
 	"strconv"
 	"strings"
 
-	"charm.land/bubbles/v2/key"
-	tea "charm.land/bubbletea/v2"
-	"github.com/charmbracelet/nextcode/internal/question"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"nextcode.io/bubbles/v2/key"
+	tea "nextcode.io/bubbletea/v2"
+	"github.com/sauravmarvani/nextcode/internal/question"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 	uv "github.com/charmbracelet/ultraviolet"
 )
 

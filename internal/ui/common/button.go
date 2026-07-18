@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"nextcode.io/lipgloss/v2"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 )
 
 // ButtonOpts defines the configuration for a single button

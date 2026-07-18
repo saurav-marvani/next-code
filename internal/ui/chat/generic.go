@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/charmbracelet/nextcode/internal/message"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"github.com/sauravmarvani/nextcode/internal/message"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 )
 
 // GenericToolMessageItem is a message item that represents an unknown tool call.

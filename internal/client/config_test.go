@@ -9,9 +9,9 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/oauth"
-	"github.com/charmbracelet/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/oauth"
+	"github.com/sauravmarvani/nextcode/internal/proto"
 	"github.com/stretchr/testify/require"
 )
 

@@ -6,17 +6,17 @@ import (
 	"os"
 	"path/filepath"
 
-	tea "charm.land/bubbletea/v2"
-	"charm.land/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/nextcode/internal/commands"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/message"
-	"github.com/charmbracelet/nextcode/internal/oauth"
-	"github.com/charmbracelet/nextcode/internal/permission"
-	"github.com/charmbracelet/nextcode/internal/session"
-	"github.com/charmbracelet/nextcode/internal/skills"
-	"github.com/charmbracelet/nextcode/internal/ui/common"
-	"github.com/charmbracelet/nextcode/internal/ui/util"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"github.com/sauravmarvani/nextcode/internal/commands"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/message"
+	"github.com/sauravmarvani/nextcode/internal/oauth"
+	"github.com/sauravmarvani/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/session"
+	"github.com/sauravmarvani/nextcode/internal/skills"
+	"github.com/sauravmarvani/nextcode/internal/ui/common"
+	"github.com/sauravmarvani/nextcode/internal/ui/util"
 )
 
 // ActionClose is a message to close the current dialog.

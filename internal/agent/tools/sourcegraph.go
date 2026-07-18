@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 )
 
 type SourcegraphParams struct {

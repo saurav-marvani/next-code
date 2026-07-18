@@ -20,26 +20,26 @@ import (
 	"strings"
 	"time"
 
-	tea "charm.land/bubbletea/v2"
-	fang "charm.land/fang/v2"
-	"charm.land/lipgloss/v2"
+	tea "nextcode.io/bubbletea/v2"
+	fang "nextcode.io/fang/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/charmbracelet/colorprofile"
-	"github.com/charmbracelet/nextcode/internal/app"
-	"github.com/charmbracelet/nextcode/internal/client"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/db"
-	"github.com/charmbracelet/nextcode/internal/event"
-	"github.com/charmbracelet/nextcode/internal/lock"
-	nextcodelog "github.com/charmbracelet/nextcode/internal/log"
-	"github.com/charmbracelet/nextcode/internal/projects"
-	"github.com/charmbracelet/nextcode/internal/proto"
-	"github.com/charmbracelet/nextcode/internal/server"
-	"github.com/charmbracelet/nextcode/internal/session"
-	"github.com/charmbracelet/nextcode/internal/skills"
-	"github.com/charmbracelet/nextcode/internal/ui/common"
-	ui "github.com/charmbracelet/nextcode/internal/ui/model"
-	"github.com/charmbracelet/nextcode/internal/version"
-	"github.com/charmbracelet/nextcode/internal/workspace"
+	"github.com/sauravmarvani/nextcode/internal/app"
+	"github.com/sauravmarvani/nextcode/internal/client"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/db"
+	"github.com/sauravmarvani/nextcode/internal/event"
+	"github.com/sauravmarvani/nextcode/internal/lock"
+	nextcodelog "github.com/sauravmarvani/nextcode/internal/log"
+	"github.com/sauravmarvani/nextcode/internal/projects"
+	"github.com/sauravmarvani/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/server"
+	"github.com/sauravmarvani/nextcode/internal/session"
+	"github.com/sauravmarvani/nextcode/internal/skills"
+	"github.com/sauravmarvani/nextcode/internal/ui/common"
+	ui "github.com/sauravmarvani/nextcode/internal/ui/model"
+	"github.com/sauravmarvani/nextcode/internal/version"
+	"github.com/sauravmarvani/nextcode/internal/workspace"
 	uv "github.com/charmbracelet/ultraviolet"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/charmbracelet/x/exp/charmtone"
@@ -140,7 +140,7 @@ nextcode --continue
 		if _, err := program.Run(); err != nil {
 			event.Error(err)
 			slog.Error("TUI run error", "error", err)
-			return errors.New("NextCode crashed. If metrics are enabled, we were notified about it. If you'd like to report it, please copy the stacktrace above and open an issue at https://github.com/charmbracelet/nextcode/issues/new?template=bug.yml") //nolint:staticcheck
+			return errors.New("NextCode crashed. If metrics are enabled, we were notified about it. If you'd like to report it, please copy the stacktrace above and open an issue at https://github.com/sauravmarvani/nextcode/issues/new?template=bug.yml") //nolint:staticcheck
 		}
 		return nil
 	},

@@ -5,12 +5,12 @@ import (
 	"image"
 	"os"
 
-	tea "charm.land/bubbletea/v2"
-	"github.com/charmbracelet/nextcode/internal/clipboard"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
-	"github.com/charmbracelet/nextcode/internal/ui/util"
-	"github.com/charmbracelet/nextcode/internal/workspace"
+	tea "nextcode.io/bubbletea/v2"
+	"github.com/sauravmarvani/nextcode/internal/clipboard"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
+	"github.com/sauravmarvani/nextcode/internal/ui/util"
+	"github.com/sauravmarvani/nextcode/internal/workspace"
 	uv "github.com/charmbracelet/ultraviolet"
 )
 

@@ -7,8 +7,8 @@ import (
 	"slices"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/nextcode/internal/message"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"github.com/sauravmarvani/nextcode/internal/message"
 )
 
 // CreateMessageParams represents parameters for creating a message.

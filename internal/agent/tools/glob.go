@@ -14,10 +14,10 @@ import (
 	"sort"
 	"strings"
 
-	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/filepathext"
-	"github.com/charmbracelet/nextcode/internal/fsext"
+	"nextcode.io/fantasy"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/filepathext"
+	"github.com/sauravmarvani/nextcode/internal/fsext"
 )
 
 const GlobToolName = "glob"

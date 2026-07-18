@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"regexp"
 
-	"github.com/charmbracelet/nextcode/internal/log"
+	"github.com/sauravmarvani/nextcode/internal/log"
 )
 
 var assistantRolePattern = regexp.MustCompile(`"role"\s*:\s*"assistant"`)

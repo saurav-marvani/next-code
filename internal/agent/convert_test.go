@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 	"testing"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/stretchr/testify/require"
 )
 

@@ -10,8 +10,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/csync"
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 )
 

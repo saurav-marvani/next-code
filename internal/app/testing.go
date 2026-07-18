@@ -4,11 +4,11 @@ import (
 	"context"
 	"sync"
 
-	tea "charm.land/bubbletea/v2"
-	"github.com/charmbracelet/nextcode/internal/agent/notify"
-	"github.com/charmbracelet/nextcode/internal/permission"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
-	"github.com/charmbracelet/nextcode/internal/question"
+	tea "nextcode.io/bubbletea/v2"
+	"github.com/sauravmarvani/nextcode/internal/agent/notify"
+	"github.com/sauravmarvani/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/question"
 )
 
 // NewForTest constructs a minimal [App] suitable for in-process tests

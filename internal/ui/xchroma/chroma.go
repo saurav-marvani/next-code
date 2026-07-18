@@ -6,7 +6,7 @@ import (
 	"io"
 	"sync"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/alecthomas/chroma/v2"
 	"github.com/alecthomas/chroma/v2/lexers"
 )

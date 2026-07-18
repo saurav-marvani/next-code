@@ -1,8 +1,8 @@
 package backend
 
 import (
-	"github.com/charmbracelet/nextcode/internal/permission"
-	"github.com/charmbracelet/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/permission"
+	"github.com/sauravmarvani/nextcode/internal/proto"
 )
 
 // GrantPermission grants, denies, or persistently grants a permission

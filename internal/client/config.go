@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/oauth"
-	"github.com/charmbracelet/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/oauth"
+	"github.com/sauravmarvani/nextcode/internal/proto"
 )
 
 // SetConfigField sets a config key/value pair on the server.

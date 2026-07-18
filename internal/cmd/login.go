@@ -7,13 +7,13 @@ import (
 	"os"
 	"os/signal"
 
-	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/nextcode/internal/clipboard"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/oauth"
-	"github.com/charmbracelet/nextcode/internal/oauth/copilot"
-	"github.com/charmbracelet/nextcode/internal/oauth/hyper"
-	"github.com/charmbracelet/nextcode/internal/workspace"
+	"nextcode.io/lipgloss/v2"
+	"github.com/sauravmarvani/nextcode/internal/clipboard"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/oauth"
+	"github.com/sauravmarvani/nextcode/internal/oauth/copilot"
+	"github.com/sauravmarvani/nextcode/internal/oauth/hyper"
+	"github.com/sauravmarvani/nextcode/internal/workspace"
 	"github.com/pkg/browser"
 	"github.com/spf13/cobra"
 )
@@ -26,7 +26,7 @@ var loginCmd = &cobra.Command{
 The platform should be provided as an argument.
 Available platforms are: hyper, copilot.`,
 	Example: `
-# Authenticate with Charm Hyper
+# Authenticate with NextCode Hyper
 nextcode login
 
 # Authenticate with GitHub Copilot

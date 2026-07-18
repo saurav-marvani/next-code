@@ -7,7 +7,7 @@ import (
 	"sync"
 	"testing"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/catwalk"
 	"github.com/stretchr/testify/require"
 )
 
@@ -214,7 +214,7 @@ func TestProviders_Integration_BothFail(t *testing.T) {
 
 	hyperResult, err := testHyperSyncer.Get(t.Context())
 	require.NoError(t, err)
-	require.Equal(t, "Charm Hyper", hyperResult.Name) // Falls back to embedded when no models.
+	require.Equal(t, "NextCode Hyper", hyperResult.Name) // Falls back to embedded when no models.
 }
 
 func TestCache_StoreAndGet(t *testing.T) {

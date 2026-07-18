@@ -15,7 +15,7 @@ NextCode uses JSON configuration files with the following priority (highest to l
 
 ```json
 {
-  "$schema": "https://charm.land/nextcode.json",
+  "$schema": "https://nextcode.io/nextcode.json",
   "models": {},
   "providers": {},
   "mcp": {},

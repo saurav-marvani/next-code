@@ -11,11 +11,11 @@ import (
 
 	"github.com/zeebo/xxh3"
 
-	tea "charm.land/bubbletea/v2"
-	"charm.land/lipgloss/v2"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/lucasb-eyer/go-colorful"
 
-	"github.com/charmbracelet/nextcode/internal/csync"
+	"github.com/sauravmarvani/nextcode/internal/csync"
 )
 
 const (

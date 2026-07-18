@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/charmbracelet/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/proto"
 )
 
 // handlePostWorkspaceConfigSet sets a configuration field.

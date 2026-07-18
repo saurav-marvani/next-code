@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	tea "charm.land/bubbletea/v2"
-	"github.com/charmbracelet/nextcode/internal/backend"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/proto"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
-	"github.com/charmbracelet/nextcode/internal/skills"
+	tea "nextcode.io/bubbletea/v2"
+	"github.com/sauravmarvani/nextcode/internal/backend"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/skills"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 )

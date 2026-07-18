@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/shell"
+	"nextcode.io/fantasy"
+	"github.com/sauravmarvani/nextcode/internal/shell"
 )
 
 const (

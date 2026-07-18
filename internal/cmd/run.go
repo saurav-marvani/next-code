@@ -10,19 +10,19 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/lipgloss/v2"
-	"charm.land/log/v2"
-	"github.com/charmbracelet/nextcode/internal/client"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/event"
-	"github.com/charmbracelet/nextcode/internal/format"
-	"github.com/charmbracelet/nextcode/internal/herdr"
-	"github.com/charmbracelet/nextcode/internal/proto"
-	"github.com/charmbracelet/nextcode/internal/pubsub"
-	"github.com/charmbracelet/nextcode/internal/session"
-	"github.com/charmbracelet/nextcode/internal/ui/anim"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
-	"github.com/charmbracelet/nextcode/internal/workspace"
+	"nextcode.io/lipgloss/v2"
+	"nextcode.io/log/v2"
+	"github.com/sauravmarvani/nextcode/internal/client"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/event"
+	"github.com/sauravmarvani/nextcode/internal/format"
+	"github.com/sauravmarvani/nextcode/internal/herdr"
+	"github.com/sauravmarvani/nextcode/internal/proto"
+	"github.com/sauravmarvani/nextcode/internal/pubsub"
+	"github.com/sauravmarvani/nextcode/internal/session"
+	"github.com/sauravmarvani/nextcode/internal/ui/anim"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
+	"github.com/sauravmarvani/nextcode/internal/workspace"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/charmbracelet/x/exp/charmtone"
 	"github.com/charmbracelet/x/term"
@@ -41,7 +41,7 @@ The prompt can be provided as arguments or piped from stdin.`,
 nextcode run "Guess my 5 favorite Pokémon"
 
 # Pipe input from stdin
-curl https://charm.land | nextcode run "Summarize this website"
+curl https://nextcode.io | nextcode run "Summarize this website"
 
 # Read from a file
 nextcode run "What is this code doing?" <<< prrr.go

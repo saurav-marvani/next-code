@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/filepathext"
-	"github.com/charmbracelet/nextcode/internal/permission"
+	"nextcode.io/fantasy"
+	"github.com/sauravmarvani/nextcode/internal/filepathext"
+	"github.com/sauravmarvani/nextcode/internal/permission"
 )
 
 type DownloadParams struct {

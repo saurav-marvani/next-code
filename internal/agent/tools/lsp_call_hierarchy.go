@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strings"
 
-	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/lsp"
+	"nextcode.io/fantasy"
+	"github.com/sauravmarvani/nextcode/internal/lsp"
 )
 
 type CallHierarchyParams struct {

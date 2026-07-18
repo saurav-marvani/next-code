@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 )
 
 const NextCodeLogsToolName = "nextcode_logs"

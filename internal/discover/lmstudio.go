@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/catwalk"
 )
 
 func init() {

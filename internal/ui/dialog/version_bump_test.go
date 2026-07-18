@@ -3,10 +3,10 @@ package dialog
 import (
 	"testing"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/nextcode/internal/session"
-	"github.com/charmbracelet/nextcode/internal/ui/list"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"github.com/sauravmarvani/nextcode/internal/session"
+	"github.com/sauravmarvani/nextcode/internal/ui/list"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 	"github.com/sahilm/fuzzy"
 	"github.com/stretchr/testify/require"
 )

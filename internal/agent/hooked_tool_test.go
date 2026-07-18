@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"charm.land/fantasy"
-	"github.com/charmbracelet/nextcode/internal/config"
-	"github.com/charmbracelet/nextcode/internal/hooks"
-	"github.com/charmbracelet/nextcode/internal/permission"
+	"nextcode.io/fantasy"
+	"github.com/sauravmarvani/nextcode/internal/config"
+	"github.com/sauravmarvani/nextcode/internal/hooks"
+	"github.com/sauravmarvani/nextcode/internal/permission"
 	"github.com/stretchr/testify/require"
 )
 

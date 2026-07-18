@@ -4,13 +4,13 @@ import (
 	"slices"
 	"strings"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 	"github.com/charmbracelet/colorprofile"
 	uv "github.com/charmbracelet/ultraviolet"
 	"github.com/charmbracelet/x/ansi"
 	xstrings "github.com/charmbracelet/x/exp/strings"
 
-	"github.com/charmbracelet/nextcode/internal/ui/notification"
+	"github.com/sauravmarvani/nextcode/internal/ui/notification"
 )
 
 // Capabilities define different terminal capabilities supported.

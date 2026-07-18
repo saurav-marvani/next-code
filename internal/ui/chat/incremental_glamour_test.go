@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"charm.land/glamour/v2"
-	"github.com/charmbracelet/nextcode/internal/ui/styles"
+	"nextcode.io/glamour/v2"
+	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 	"github.com/stretchr/testify/require"
 )
 
