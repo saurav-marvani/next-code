@@ -5,7 +5,7 @@ import (
 	_ "embed"
 	"errors"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 
 	"github.com/sauravmarvani/nextcode/internal/agent/prompt"
 	"github.com/sauravmarvani/nextcode/internal/agent/tools"

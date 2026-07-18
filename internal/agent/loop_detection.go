@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"io"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 )
 
 const (

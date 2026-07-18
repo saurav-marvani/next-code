@@ -1,7 +1,7 @@
 # NextCode
 
 <p align="center">
-    <a href="https://stuff.charm.sh/nextcode/charm-nextcode.png"><img width="450" alt="Charm NextCode Logo" src="https://github.com/user-attachments/assets/cf8ca3ce-8b02-43f0-9d0f-5a331488da4b" /></a><br />
+    <a href="https://stuff.nextcode.io/nextcode/charm-nextcode.png"><img width="450" alt="Charm NextCode Logo" src="https://github.com/user-attachments/assets/cf8ca3ce-8b02-43f0-9d0f-5a331488da4b" /></a><br />
     <a href="https://github.com/sauravmarvani/nextcode/releases"><img src="https://img.shields.io/github/release/sauravmarvani/nextcode" alt="Latest Release"></a>
     <a href="https://github.com/sauravmarvani/nextcode/actions"><img src="https://github.com/sauravmarvani/nextcode/actions/workflows/build.yml/badge.svg" alt="Build Status"></a>
 </p>
@@ -653,7 +653,7 @@ it creates. You can customize this behavior with the `attribution` option:
 - `trailer_style`: Controls the attribution trailer added to commit messages
   (default: `assisted-by`)
   - `assisted-by`: Adds `Assisted-by: NextCode:[ModelID]` as specified in [the convention](https://docs.kernel.org/process/coding-assistants.html#attribution)
-  - `co-authored-by`: Adds `Co-Authored-By: NextCode <nextcode@charm.land>`
+  - `co-authored-by`: Adds `Co-Authored-By: NextCode <nextcode@nextcode.io>`
   - `none`: No attribution trailer
 - `generated_with`: When true (default), adds `💘 Generated with NextCode` line to
   commit messages and PR descriptions
@@ -969,7 +969,7 @@ Installing an extra tool might be needed on Unix-like environments.
 
 ## Contributing
 
-See the [contributing guide](https://github.com/charmbracelet/nextcode?tab=contributing-ov-file#contributing).
+See the [contributing guide](https://github.com/sauravmarvani/nextcode?tab=contributing-ov-file#contributing).
 
 ## Whatcha think?
 
@@ -979,20 +979,20 @@ We’d love to hear your thoughts on this project. Need help? We gotchu. You can
 - [Slack][slack]
 - [Discord][discord]
 - [The Fediverse](https://mastodon.social/@charmcli)
-- [Bluesky](https://bsky.app/profile/charm.land)
+- [Bluesky](https://bsky.app/profile/nextcode.io)
 
-[slack]: https://charm.land/slack
-[discord]: https://charm.land/discord
+[slack]: https://nextcode.io/slack
+[discord]: https://nextcode.io/discord
 
 ## License
 
-[FSL-1.1-MIT](https://github.com/charmbracelet/nextcode/raw/main/LICENSE.md)
+[FSL-1.1-MIT](https://github.com/sauravmarvani/nextcode/raw/main/LICENSE.md)
 
 ---
 
-Part of NextCode(https://charm.land).
+Part of [NextCode](https://nextcode.io).
 
-<a href="https://charm.land/"><img alt="The Charm logo" width="400" src="https://stuff.charm.sh/charm-banner-softy.jpg" /></a>
+<a href="https://nextcode.io/"><img alt="The Charm logo" width="400" src="https://stuff.nextcode.io/charm-banner-softy.jpg" /></a>
 
 <!--prettier-ignore-->
 NextCode loves open source, like Charm loves open source

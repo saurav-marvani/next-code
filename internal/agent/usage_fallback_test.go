@@ -4,8 +4,8 @@ import (
 	"errors"
 	"testing"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"charm.land/fantasy"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/message"
 	"github.com/sauravmarvani/nextcode/internal/session"
 	"github.com/stretchr/testify/require"

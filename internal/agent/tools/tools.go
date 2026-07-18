@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"testing"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 )
 
 type (

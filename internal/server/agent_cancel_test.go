@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/agent"
 	"github.com/sauravmarvani/nextcode/internal/app"
 	"github.com/sauravmarvani/nextcode/internal/backend"

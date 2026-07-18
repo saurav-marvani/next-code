@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"time"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 	"mvdan.cc/sh/v3/shell"
 )
 

@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/lsp"
 )
 

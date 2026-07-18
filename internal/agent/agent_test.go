@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"charm.land/fantasy"
-	"charm.land/x/vcr"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"nextcode.io/fantasy"
+	"nextcode.io/x/vcr"
 	"github.com/sauravmarvani/nextcode/internal/agent/tools"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/message"

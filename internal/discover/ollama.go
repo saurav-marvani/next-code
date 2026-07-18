@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/catwalk"
 )
 
 func init() {

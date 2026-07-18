@@ -20,9 +20,9 @@ import (
 	"strings"
 	"time"
 
-	tea "charm.land/bubbletea/v2"
-	fang "charm.land/fang/v2"
-	"charm.land/lipgloss/v2"
+	tea "nextcode.io/bubbletea/v2"
+	fang "nextcode.io/fang/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/charmbracelet/colorprofile"
 	"github.com/sauravmarvani/nextcode/internal/app"
 	"github.com/sauravmarvani/nextcode/internal/client"

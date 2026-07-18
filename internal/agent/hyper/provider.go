@@ -14,7 +14,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/catwalk"
 )
 
 //go:generate wget -O provider.json https://hyper.nextcode.io/v1/provider
@@ -38,9 +38,9 @@ const (
 	// Name is the default name of this meta provider.
 	Name = "hyper"
 	// DisplayName is the display name of Hyper.
-	DisplayName = "Charm Hyper"
+	DisplayName = "NextCode Hyper"
 	// defaultBaseURL is the default proxy URL.
-	defaultBaseURL = "https://hyper.charm.land"
+	defaultBaseURL = "https://hyper.nextcode.io"
 )
 
 // BaseURL returns the base URL, which is either $HYPER_URL or the default.

@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"charm.land/bubbles/v2/textarea"
+	"nextcode.io/bubbles/v2/textarea"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/session"
 	"github.com/sauravmarvani/nextcode/internal/ui/chat"

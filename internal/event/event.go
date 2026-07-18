@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	endpoint = "https://data.charm.land"
+	endpoint = "https://data.nextcode.io"
 	key      = "phc_4zt4VgDWLqbYnJYEwLRxFoaTL2noNrQij0C6E8k3I0V"
 
 	nonInteractiveAttrName      = "NonInteractive"

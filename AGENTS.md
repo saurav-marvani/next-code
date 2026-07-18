@@ -3,7 +3,7 @@
 ## Project Overview
 
 NextCode is a terminal-based AI coding assistant built in Go by
-[Charm](https://charm.land). It connects to LLMs and gives them tools to read,
+[Charm](https://nextcode.io). It connects to LLMs and gives them tools to read,
 write, and execute code. It supports multiple providers (Anthropic, OpenAI,
 Gemini, Bedrock, Copilot, Hyper, MiniMax, Vercel, and more), integrates with
 LSPs for code intelligence, and supports extensibility via MCP servers and
@@ -52,13 +52,13 @@ internal/
 
 ### Key Dependency Roles
 
-- **`charm.land/fantasy`**: LLM provider abstraction layer. Handles protocol
+- **`nextcode.io/fantasy`**: LLM provider abstraction layer. Handles protocol
   differences between Anthropic, OpenAI, Gemini, etc. Used in `internal/app`
   and `internal/agent`.
-- **`charm.land/bubbletea/v2`**: TUI framework powering the interactive UI.
-- **`charm.land/lipgloss/v2`**: Terminal styling.
-- **`charm.land/glamour/v2`**: Markdown rendering in the terminal.
-- **`charm.land/catwalk`**: Snapshot/golden-file testing for TUI components.
+- **`nextcode.io/bubbletea/v2`**: TUI framework powering the interactive UI.
+- **`nextcode.io/lipgloss/v2`**: Terminal styling.
+- **`nextcode.io/glamour/v2`**: Markdown rendering in the terminal.
+- **`nextcode.io/catwalk`**: Snapshot/golden-file testing for TUI components.
 - **`sqlc`**: Generates Go code from SQL queries in `internal/db/sql/`.
 
 ### Key Patterns

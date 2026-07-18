@@ -14,7 +14,7 @@ import (
 	"sort"
 	"strings"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/filepathext"
 	"github.com/sauravmarvani/nextcode/internal/fsext"

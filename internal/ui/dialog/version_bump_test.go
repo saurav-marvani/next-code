@@ -3,7 +3,7 @@ package dialog
 import (
 	"testing"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/catwalk"
 	"github.com/sauravmarvani/nextcode/internal/session"
 	"github.com/sauravmarvani/nextcode/internal/ui/list"
 	"github.com/sauravmarvani/nextcode/internal/ui/styles"

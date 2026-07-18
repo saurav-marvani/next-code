@@ -1,8 +1,8 @@
 package dialog
 
 import (
-	"charm.land/catwalk/pkg/catwalk"
-	"charm.land/lipgloss/v2"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/ui/common"
 	"github.com/sauravmarvani/nextcode/internal/ui/list"

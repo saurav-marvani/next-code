@@ -8,8 +8,8 @@ package agenttest
 import (
 	"context"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"charm.land/fantasy/providers/openaicompat"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"nextcode.io/fantasy/providers/openaicompat"
 	"github.com/sauravmarvani/nextcode/internal/agent"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/message"

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log/slog"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/agent/tools"
 	"github.com/sauravmarvani/nextcode/internal/hooks"
 	"github.com/sauravmarvani/nextcode/internal/permission"

@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 	"github.com/sauravmarvani/nextcode/internal/agent/notify"
 	"github.com/sauravmarvani/nextcode/internal/agent/tools/mcp"
 	"github.com/sauravmarvani/nextcode/internal/app"

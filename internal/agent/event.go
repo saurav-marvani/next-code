@@ -3,7 +3,7 @@ package agent
 import (
 	"time"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/event"
 )
 

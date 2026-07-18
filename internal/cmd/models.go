@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	"charm.land/lipgloss/v2/tree"
+	"nextcode.io/lipgloss/v2/tree"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/mattn/go-isatty"
 	"github.com/spf13/cobra"

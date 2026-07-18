@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/hooks"
 	"github.com/sauravmarvani/nextcode/internal/permission"

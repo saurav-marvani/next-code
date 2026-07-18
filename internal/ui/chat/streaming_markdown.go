@@ -3,7 +3,7 @@ package chat
 import (
 	"strings"
 
-	"charm.land/glamour/v2"
+	"nextcode.io/glamour/v2"
 	"github.com/sauravmarvani/nextcode/internal/ui/common"
 )
 

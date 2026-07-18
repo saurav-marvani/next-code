@@ -7,8 +7,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"charm.land/catwalk/pkg/embedded"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/embedded"
 )
 
 type catwalkClient interface {

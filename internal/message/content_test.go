@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/stretchr/testify/require"
 )
 

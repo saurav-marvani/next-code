@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"strings"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 
 	"github.com/sauravmarvani/nextcode/internal/message"
 )

@@ -4,9 +4,9 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/bubbles/v2/help"
-	tea "charm.land/bubbletea/v2"
-	"charm.land/lipgloss/v2"
+	"nextcode.io/bubbles/v2/help"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/ui/common"
 	"github.com/sauravmarvani/nextcode/internal/ui/util"
 	uv "github.com/charmbracelet/ultraviolet"

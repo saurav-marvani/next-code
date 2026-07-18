@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/lipgloss/v2"
-	"charm.land/log/v2"
+	"nextcode.io/lipgloss/v2"
+	"nextcode.io/log/v2"
 	"github.com/sauravmarvani/nextcode/internal/client"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/event"
@@ -41,7 +41,7 @@ The prompt can be provided as arguments or piped from stdin.`,
 nextcode run "Guess my 5 favorite Pokémon"
 
 # Pipe input from stdin
-curl https://charm.land | nextcode run "Summarize this website"
+curl https://nextcode.io | nextcode run "Summarize this website"
 
 # Read from a file
 nextcode run "What is this code doing?" <<< prrr.go

@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/filetracker"
 	"github.com/sauravmarvani/nextcode/internal/permission"
 	"github.com/sauravmarvani/nextcode/internal/pubsub"

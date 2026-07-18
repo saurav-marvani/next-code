@@ -5,7 +5,7 @@ import (
 	"image"
 	"os"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 	"github.com/sauravmarvani/nextcode/internal/clipboard"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/ui/styles"

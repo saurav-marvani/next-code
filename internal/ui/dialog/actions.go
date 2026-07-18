@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	tea "charm.land/bubbletea/v2"
-	"charm.land/catwalk/pkg/catwalk"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/catwalk/pkg/catwalk"
 	"github.com/sauravmarvani/nextcode/internal/commands"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/message"

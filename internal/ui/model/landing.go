@@ -3,7 +3,7 @@ package model
 import (
 	"image"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/ui/common"
 	"github.com/sauravmarvani/nextcode/internal/workspace"
 	"github.com/charmbracelet/ultraviolet/layout"

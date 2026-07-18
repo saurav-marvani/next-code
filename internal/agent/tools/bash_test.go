@@ -7,7 +7,7 @@ import (
 	"testing"
 	"unicode/utf8"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/permission"
 	"github.com/sauravmarvani/nextcode/internal/pubsub"

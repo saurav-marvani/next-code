@@ -1,6 +1,6 @@
 package model
 
-import "charm.land/bubbles/v2/key"
+import "nextcode.io/bubbles/v2/key"
 
 type KeyMap struct {
 	Editor struct {

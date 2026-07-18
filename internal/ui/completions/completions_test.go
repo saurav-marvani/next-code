@@ -3,7 +3,7 @@ package completions
 import (
 	"testing"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/stretchr/testify/require"
 )
 

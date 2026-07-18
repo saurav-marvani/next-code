@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strings"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/agent/tools/mcp"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/filepathext"

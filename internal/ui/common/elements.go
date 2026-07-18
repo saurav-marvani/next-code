@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/agent/hyper"
 	"github.com/sauravmarvani/nextcode/internal/home"
 	"github.com/sauravmarvani/nextcode/internal/ui/styles"

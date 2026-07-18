@@ -6,7 +6,7 @@ import (
 	"slices"
 	"strings"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/lsp"
 	"github.com/sauravmarvani/nextcode/internal/ui/common"
 	"github.com/sauravmarvani/nextcode/internal/ui/styles"

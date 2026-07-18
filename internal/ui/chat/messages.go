@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	tea "charm.land/bubbletea/v2"
-	"charm.land/catwalk/pkg/catwalk"
-	"charm.land/lipgloss/v2"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/message"
 	"github.com/sauravmarvani/nextcode/internal/ui/anim"

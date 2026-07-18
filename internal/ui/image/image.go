@@ -11,7 +11,7 @@ import (
 	"strings"
 	"sync"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 	"github.com/sauravmarvani/nextcode/internal/ui/util"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/charmbracelet/x/ansi/kitty"

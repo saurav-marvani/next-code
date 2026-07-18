@@ -4,8 +4,8 @@ import (
 	"encoding/xml"
 	"strings"
 
-	tea "charm.land/bubbletea/v2"
-	"charm.land/lipgloss/v2"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/message"
 	"github.com/sauravmarvani/nextcode/internal/ui/attachments"
 	"github.com/sauravmarvani/nextcode/internal/ui/common"

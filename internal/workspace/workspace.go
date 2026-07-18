@@ -8,8 +8,8 @@ import (
 	"context"
 	"time"
 
-	tea "charm.land/bubbletea/v2"
-	"charm.land/catwalk/pkg/catwalk"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/catwalk/pkg/catwalk"
 	mcptools "github.com/sauravmarvani/nextcode/internal/agent/tools/mcp"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/history"

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/agent/notify"
 	"github.com/sauravmarvani/nextcode/internal/message"
 	"github.com/sauravmarvani/nextcode/internal/pubsub"

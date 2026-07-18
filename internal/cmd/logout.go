@@ -7,7 +7,7 @@ import (
 	"os"
 	"os/signal"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/client"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/charmbracelet/x/ansi"
@@ -29,7 +29,7 @@ The platform should be provided as an argument.
 If no argument is given, a list of logged-in platforms will be shown.
 Available platforms are: hyper, copilot.`,
 	Example: `
-# Sign out from Charm Hyper
+# Sign out from NextCode Hyper
 nextcode logout hyper
 
 # Sign out from GitHub Copilot

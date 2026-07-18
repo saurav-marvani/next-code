@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/bubbles/v2/textinput"
-	tea "charm.land/bubbletea/v2"
-	"charm.land/lipgloss/v2"
+	"nextcode.io/bubbles/v2/textinput"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/session"
 	"github.com/sauravmarvani/nextcode/internal/ui/list"
 	"github.com/sauravmarvani/nextcode/internal/ui/styles"

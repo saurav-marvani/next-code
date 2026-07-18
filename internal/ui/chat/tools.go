@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	tea "charm.land/bubbletea/v2"
-	"charm.land/lipgloss/v2"
-	"charm.land/lipgloss/v2/tree"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/lipgloss/v2"
+	"nextcode.io/lipgloss/v2/tree"
 	"github.com/sauravmarvani/nextcode/internal/agent"
 	"github.com/sauravmarvani/nextcode/internal/agent/tools"
 	"github.com/sauravmarvani/nextcode/internal/diff"

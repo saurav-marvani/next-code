@@ -3,7 +3,7 @@ package completions
 import (
 	"slices"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/ui/list"
 	"github.com/charmbracelet/x/ansi"
 	"github.com/rivo/uniseg"

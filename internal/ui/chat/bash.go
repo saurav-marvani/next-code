@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/agent/tools"
 	"github.com/sauravmarvani/nextcode/internal/message"
 	"github.com/sauravmarvani/nextcode/internal/ui/styles"

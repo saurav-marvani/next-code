@@ -3,7 +3,7 @@ package backend
 import (
 	"context"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 
 	mcptools "github.com/sauravmarvani/nextcode/internal/agent/tools/mcp"
 	"github.com/sauravmarvani/nextcode/internal/app"

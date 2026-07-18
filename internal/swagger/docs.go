@@ -11,7 +11,7 @@ const docTemplate = `{
         "title": "{{.Title}}",
         "contact": {
             "name": "Charm",
-            "url": "https://charm.sh"
+            "url": "https://nextcode.io"
         },
         "license": {
             "name": "MIT",

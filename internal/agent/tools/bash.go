@@ -14,7 +14,7 @@ import (
 
 	"github.com/charmbracelet/x/ansi"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/fsext"
 	"github.com/sauravmarvani/nextcode/internal/permission"

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/catwalk"
 	"github.com/sauravmarvani/nextcode/internal/agent/hyper"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/discover"
@@ -33,7 +33,7 @@ var schemaCmd = &cobra.Command{
 // setProviderTypeEnum overwrites the provider `type` enum with the live set
 // of accepted values rather than a hand-maintained struct tag. The values
 // must match exactly what load.go validates against: the catwalk provider
-// types, the Charm Hyper type, and any locally-discovered providers that
+// types, the NextCode Hyper type, and any locally-discovered providers that
 // self-register an enricher (e.g. ollama, omlx). Sourcing the enum here keeps
 // the published schema from drifting as provider types are added or renamed.
 func setProviderTypeEnum(schema *jsonschema.Schema) {

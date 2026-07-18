@@ -11,7 +11,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/catwalk"
 	"github.com/sauravmarvani/nextcode/internal/agent/hyper"
 	xetag "github.com/charmbracelet/x/etag"
 )

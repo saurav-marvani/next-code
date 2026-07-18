@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 	"github.com/sauravmarvani/nextcode/internal/ui/common"
 	"github.com/stretchr/testify/require"
 )

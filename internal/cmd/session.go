@@ -14,7 +14,7 @@ import (
 	"syscall"
 	"time"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/charmbracelet/colorprofile"
 	"github.com/sauravmarvani/nextcode/internal/agent/tools"
 	"github.com/sauravmarvani/nextcode/internal/config"

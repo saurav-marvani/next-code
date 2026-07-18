@@ -3,7 +3,7 @@ package dialog
 import (
 	"testing"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 	"github.com/sauravmarvani/nextcode/internal/permission"
 	"github.com/sauravmarvani/nextcode/internal/ui/common"
 	"github.com/sauravmarvani/nextcode/internal/ui/styles"

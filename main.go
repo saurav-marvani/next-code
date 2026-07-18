@@ -4,7 +4,7 @@
 //	@version		1.0
 //	@description	NextCode is a terminal-based AI coding assistant. This API is served over a Unix socket (or Windows named pipe) and provides programmatic access to workspaces, sessions, agents, LSP, MCP, and more.
 //	@contact.name	Charm
-//	@contact.url	https://charm.sh
+//	@contact.url	https://nextcode.io
 //	@license.name	MIT
 //	@license.url	https://github.com/sauravmarvani/nextcode/blob/main/LICENSE
 //	@BasePath		/v1

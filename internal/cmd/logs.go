@@ -10,7 +10,7 @@ import (
 	"slices"
 	"time"
 
-	"charm.land/log/v2"
+	"nextcode.io/log/v2"
 	"github.com/charmbracelet/colorprofile"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/charmbracelet/x/term"

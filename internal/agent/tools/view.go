@@ -16,7 +16,7 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/filepathext"
 	"github.com/sauravmarvani/nextcode/internal/filetracker"
 	"github.com/sauravmarvani/nextcode/internal/lsp"

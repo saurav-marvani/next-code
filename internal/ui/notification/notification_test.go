@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 	"github.com/sauravmarvani/nextcode/internal/ui/notification"
 	"github.com/stretchr/testify/require"
 )

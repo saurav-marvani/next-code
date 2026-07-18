@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/filepathext"
 	"github.com/sauravmarvani/nextcode/internal/permission"
 )

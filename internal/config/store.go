@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/catwalk"
 	hyperp "github.com/sauravmarvani/nextcode/internal/agent/hyper"
 	"github.com/sauravmarvani/nextcode/internal/env"
 	"github.com/sauravmarvani/nextcode/internal/lock"

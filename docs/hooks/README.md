@@ -744,16 +744,16 @@ We'd love to hear your thoughts on this project. Need help? We gotchu. You can
 find us on:
 
 - [Twitter](https://twitter.com/charmcli)
-- [Slack](https://charm.land/slack)
-- [Discord](https://charm.land/discord)
+- [Slack](https://nextcode.io/slack)
+- [Discord](https://nextcode.io/discord)
 - [The Fediverse](https://mastodon.social/@charmcli)
-- [Bluesky](https://bsky.app/profile/charm.land)
+- [Bluesky](https://bsky.app/profile/nextcode.io)
 
 ---
 
-Part of [Charm](https://charm.land).
+Part of [Charm](https://nextcode.io).
 
-<a href="https://charm.land/"><img alt="The Charm logo" width="400" src="https://stuff.charm.sh/charm-banner-softy.jpg" /></a>
+<a href="https://nextcode.io/"><img alt="The Charm logo" width="400" src="https://stuff.nextcode.io/charm-banner-softy.jpg" /></a>
 
 <!--prettier-ignore-->
 Charm热爱开源 • Charm loves open source

@@ -19,7 +19,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/config"
 	"github.com/sauravmarvani/nextcode/internal/csync"
 	"github.com/sauravmarvani/nextcode/internal/fsext"

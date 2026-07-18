@@ -8,8 +8,8 @@ import (
 	"slices"
 	"strings"
 
-	tea "charm.land/bubbletea/v2"
-	"charm.land/lipgloss/v2"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/diff"
 	"github.com/sauravmarvani/nextcode/internal/fsext"
 	"github.com/sauravmarvani/nextcode/internal/history"

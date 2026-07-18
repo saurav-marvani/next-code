@@ -3,7 +3,7 @@ package notification
 import (
 	"log/slog"
 
-	tea "charm.land/bubbletea/v2"
+	tea "nextcode.io/bubbletea/v2"
 )
 
 // BellBackend sends notifications by triggering the terminal bell. This is the

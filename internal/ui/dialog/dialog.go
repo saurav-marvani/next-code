@@ -3,9 +3,9 @@ package dialog
 import (
 	"time"
 
-	"charm.land/bubbles/v2/key"
-	tea "charm.land/bubbletea/v2"
-	"charm.land/lipgloss/v2"
+	"nextcode.io/bubbles/v2/key"
+	tea "nextcode.io/bubbletea/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/ui/common"
 	uv "github.com/charmbracelet/ultraviolet"
 )

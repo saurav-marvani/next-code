@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"charm.land/fantasy"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/question"
 )
 

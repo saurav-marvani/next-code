@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
-	"charm.land/fantasy"
+	"nextcode.io/catwalk/pkg/catwalk"
+	"nextcode.io/fantasy"
 	"github.com/sauravmarvani/nextcode/internal/agent/notify"
 	"github.com/sauravmarvani/nextcode/internal/message"
 	"github.com/sauravmarvani/nextcode/internal/pubsub"

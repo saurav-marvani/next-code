@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"charm.land/lipgloss/v2"
+	"nextcode.io/lipgloss/v2"
 	"github.com/sauravmarvani/nextcode/internal/history"
 	"github.com/sauravmarvani/nextcode/internal/ui/styles"
 	"github.com/stretchr/testify/require"

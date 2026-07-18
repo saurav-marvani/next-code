@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"os"
 
-	"charm.land/lipgloss/v2"
-	"charm.land/lipgloss/v2/table"
+	"nextcode.io/lipgloss/v2"
+	"nextcode.io/lipgloss/v2/table"
 	"github.com/sauravmarvani/nextcode/internal/projects"
 	"github.com/charmbracelet/x/term"
 	"github.com/spf13/cobra"

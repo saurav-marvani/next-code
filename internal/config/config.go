@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"nextcode.io/catwalk/pkg/catwalk"
 	"github.com/sauravmarvani/nextcode/internal/csync"
 	"github.com/sauravmarvani/nextcode/internal/oauth"
 	"github.com/sauravmarvani/nextcode/internal/oauth/copilot"
