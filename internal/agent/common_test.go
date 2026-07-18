@@ -12,17 +12,17 @@ import (
 	"charm.land/fantasy"
 	"charm.land/fantasy/providers/openaicompat"
 	"charm.land/x/vcr"
-	"github.com/charmbracelet/crush/internal/agent/prompt"
-	"github.com/charmbracelet/crush/internal/agent/tools"
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/csync"
-	"github.com/charmbracelet/crush/internal/db"
-	"github.com/charmbracelet/crush/internal/filetracker"
-	"github.com/charmbracelet/crush/internal/history"
-	"github.com/charmbracelet/crush/internal/lsp"
-	"github.com/charmbracelet/crush/internal/message"
-	"github.com/charmbracelet/crush/internal/permission"
-	"github.com/charmbracelet/crush/internal/session"
+	"github.com/charmbracelet/nextcode/internal/agent/prompt"
+	"github.com/charmbracelet/nextcode/internal/agent/tools"
+	"github.com/charmbracelet/nextcode/internal/config"
+	"github.com/charmbracelet/nextcode/internal/csync"
+	"github.com/charmbracelet/nextcode/internal/db"
+	"github.com/charmbracelet/nextcode/internal/filetracker"
+	"github.com/charmbracelet/nextcode/internal/history"
+	"github.com/charmbracelet/nextcode/internal/lsp"
+	"github.com/charmbracelet/nextcode/internal/message"
+	"github.com/charmbracelet/nextcode/internal/permission"
+	"github.com/charmbracelet/nextcode/internal/session"
 	"github.com/stretchr/testify/require"
 
 	_ "github.com/joho/godotenv/autoload"
@@ -51,7 +51,7 @@ func hyperBuilder(model string) builderFunc {
 	return func(t *testing.T, r *vcr.Recorder) (fantasy.LanguageModel, error) {
 		provider, err := openaicompat.New(
 			openaicompat.WithBaseURL("https://hyper.charm.land/v1"),
-			openaicompat.WithAPIKey(os.Getenv("CRUSH_HYPER_API_KEY")),
+			openaicompat.WithAPIKey(os.Getenv("NEXTCODE_HYPER_API_KEY")),
 			openaicompat.WithHTTPClient(&http.Client{Transport: r}),
 		)
 		if err != nil {
@@ -62,7 +62,7 @@ func hyperBuilder(model string) builderFunc {
 }
 
 func testEnv(t *testing.T) fakeEnv {
-	workingDir := filepath.Join("/tmp/crush-test/", t.Name())
+	workingDir := filepath.Join("/tmp/nextcode-test/", t.Name())
 	os.RemoveAll(workingDir)
 
 	err := os.MkdirAll(workingDir, 0o755)
@@ -142,7 +142,7 @@ func coderAgent(r *vcr.Recorder, env fakeEnv, large, small fantasy.LanguageModel
 	}
 
 	// NOTE(@andreynering): Set a fixed config to ensure cassettes match
-	// independently of user config on `$HOME/.config/crush/crush.json`.
+	// independently of user config on `$HOME/.config/nextcode/nextcode.json`.
 	cfg.Config().Options.Attribution = &config.Attribution{
 		TrailerStyle:  "co-authored-by",
 		GeneratedWith: true,
@@ -150,7 +150,7 @@ func coderAgent(r *vcr.Recorder, env fakeEnv, large, small fantasy.LanguageModel
 
 	// Clear some fields to avoid issues with VCR cassette matching.
 	cfg.Config().Options.SkillsPaths = nil
-	cfg.Config().Options.DisabledSkills = []string{"crush-config"}
+	cfg.Config().Options.DisabledSkills = []string{"nextcode-config"}
 	cfg.Config().Options.ContextPaths = nil
 	cfg.Config().Options.GlobalContextPaths = nil
 	cfg.Config().LSP = nil

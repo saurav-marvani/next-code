@@ -6,9 +6,9 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/crush/internal/session"
-	"github.com/charmbracelet/crush/internal/ui/chat"
-	"github.com/charmbracelet/crush/internal/ui/styles"
+	"github.com/charmbracelet/nextcode/internal/session"
+	"github.com/charmbracelet/nextcode/internal/ui/chat"
+	"github.com/charmbracelet/nextcode/internal/ui/styles"
 	"github.com/charmbracelet/x/ansi"
 )
 

@@ -1,11 +1,11 @@
 ---
-name: crush-hooks
-description: Use when the user wants to add, write, debug, or configure a Crush hook — gating or blocking tool calls, approving or rewriting tool input before execution, injecting context into tool results, or troubleshooting hook behavior in crush.json.
+name: nextcode-hooks
+description: Use when the user wants to add, write, debug, or configure a NextCode hook — gating or blocking tool calls, approving or rewriting tool input before execution, injecting context into tool results, or troubleshooting hook behavior in nextcode.json.
 ---
 
-# Crush Hooks
+# NextCode Hooks
 
-Hooks are user-defined commands in `crush.json` that fire at specific points
+Hooks are user-defined commands in `nextcode.json` that fire at specific points
 during execution, giving deterministic control over tool behavior. They run
 **before** permission checks and **only on the top-level agent's** tool calls —
 sub-agent calls (task tool, agentic_fetch, etc.) are not intercepted, though
@@ -51,13 +51,13 @@ the input/output contract is identical regardless of language.
 
 | Variable                     | Description                              |
 | ---------------------------- | ---------------------------------------- |
-| `CRUSH_EVENT`                | Event name (e.g. `PreToolUse`)           |
-| `CRUSH_TOOL_NAME`            | Tool being called (e.g. `bash`)          |
-| `CRUSH_SESSION_ID`           | Current session ID                       |
-| `CRUSH_CWD`                  | Working directory                        |
-| `CRUSH_PROJECT_DIR`          | Project root directory                   |
-| `CRUSH_TOOL_INPUT_COMMAND`   | For `bash` calls: the shell command      |
-| `CRUSH_TOOL_INPUT_FILE_PATH` | For file tools: the target file path     |
+| `NEXTCODE_EVENT`                | Event name (e.g. `PreToolUse`)           |
+| `NEXTCODE_TOOL_NAME`            | Tool being called (e.g. `bash`)          |
+| `NEXTCODE_SESSION_ID`           | Current session ID                       |
+| `NEXTCODE_CWD`                  | Working directory                        |
+| `NEXTCODE_PROJECT_DIR`          | Project root directory                   |
+| `NEXTCODE_TOOL_INPUT_COMMAND`   | For `bash` calls: the shell command      |
+| `NEXTCODE_TOOL_INPUT_FILE_PATH` | For file tools: the target file path     |
 
 **JSON on stdin:**
 
@@ -129,7 +129,7 @@ Composed in **config order**:
 #!/usr/bin/env bash
 set -euo pipefail
 
-if echo "$CRUSH_TOOL_INPUT_COMMAND" | grep -qE 'rm\s+-(rf|fr)\s+/'; then
+if echo "$NEXTCODE_TOOL_INPUT_COMMAND" | grep -qE 'rm\s+-(rf|fr)\s+/'; then
   echo "Refusing to run rm -rf against root" >&2
   exit 2
 fi
@@ -153,7 +153,7 @@ Emit only `context` — omit `decision` so the normal permission flow still runs
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [[ "$CRUSH_TOOL_INPUT_FILE_PATH" == *.go ]]; then
+if [[ "$NEXTCODE_TOOL_INPUT_FILE_PATH" == *.go ]]; then
   echo '{"context": "Remember: run gofumpt after editing Go files."}'
 else
   echo '{}'
@@ -187,7 +187,7 @@ preserved.
 
 1. Add `#!/usr/bin/env bash` and `set -euo pipefail` (for shell scripts).
 2. `chmod +x` the script.
-3. Add the entry under `hooks.PreToolUse` in `crush.json` with the right matcher.
+3. Add the entry under `hooks.PreToolUse` in `nextcode.json` with the right matcher.
 4. Decide intent: inject context (omit `decision`), auto-approve (`"allow"`),
    block (`exit 2`), or halt (`exit 49`).
 5. If rewriting input, remember `updated_input` is a shallow merge — only
@@ -196,14 +196,14 @@ preserved.
 ## Debugging
 
 - Timeouts kill the hook silently and the tool call proceeds. Bump `timeout` if needed.
-- Non-zero exit codes other than 2/49 are logged but don't block — check Crush logs.
+- Non-zero exit codes other than 2/49 are logged but don't block — check NextCode logs.
 - Use `echo "debug info" >&2` for logging without corrupting stdout JSON.
 - `matcher` is a regex against the tool name. Use `^bash$` (not `bash`) if you
   don't also want to match `mcp_something_bash`.
 
 ## Claude Code Compatibility
 
-Crush also accepts Claude Code's `hookSpecificOutput` envelope. One intentional
-divergence: Crush treats `updated_input` as shallow-merge, Claude Code replaces.
+NextCode also accepts Claude Code's `hookSpecificOutput` envelope. One intentional
+divergence: NextCode treats `updated_input` as shallow-merge, Claude Code replaces.
 Existing Claude Code hooks work without modification for the matcher/decision
 parts; revisit any that relied on `updatedInput` fully replacing tool input.

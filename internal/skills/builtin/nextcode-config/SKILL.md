@@ -1,21 +1,21 @@
 ---
-name: crush-config
-description: Use when the user needs help configuring Crush — working with crush.json, setting up providers, configuring LSPs, adding MCP servers, managing skills or permissions, or changing Crush behavior.
+name: nextcode-config
+description: Use when the user needs help configuring NextCode — working with nextcode.json, setting up providers, configuring LSPs, adding MCP servers, managing skills or permissions, or changing NextCode behavior.
 ---
 
-# Crush Configuration
+# NextCode Configuration
 
-Crush uses JSON configuration files with the following priority (highest to lowest):
+NextCode uses JSON configuration files with the following priority (highest to lowest):
 
-1. `.crush.json` (project-local, hidden)
-2. `crush.json` (project-local)
-3. `$XDG_CONFIG_HOME/crush/crush.json` or `$HOME/.config/crush/crush.json` (global)
+1. `.nextcode.json` (project-local, hidden)
+2. `nextcode.json` (project-local)
+3. `$XDG_CONFIG_HOME/nextcode/nextcode.json` or `$HOME/.config/nextcode/nextcode.json` (global)
 
 ## Basic Structure
 
 ```json
 {
-  "$schema": "https://charm.land/crush.json",
+  "$schema": "https://charm.land/nextcode.json",
   "models": {},
   "providers": {},
   "mcp": {},
@@ -31,7 +31,7 @@ The `$schema` property enables IDE autocomplete but is optional.
 
 ## Shell Expansion
 
-Crush runs selected string fields through an embedded bash-compatible
+NextCode runs selected string fields through an embedded bash-compatible
 shell at load time, so values can pull from env vars, files, or helper
 commands.
 
@@ -76,9 +76,9 @@ var isn't set. Applies to MCP `headers` and provider `extra_headers`.
 
 ### Security note
 
-`crush.json` is trusted code. Any `$(...)` in it runs at load time
+`nextcode.json` is trusted code. Any `$(...)` in it runs at load time
 with the invoking user's shell privileges, before the UI appears.
-Don't launch Crush in a directory whose `crush.json` you haven't
+Don't launch NextCode in a directory whose `nextcode.json` you haven't
 reviewed.
 
 ## Common Tasks
@@ -188,7 +188,7 @@ reviewed.
   "options": {
     "skills_paths": ["./skills"],
     "disabled_tools": ["bash", "sourcegraph"],
-    "disabled_skills": ["crush-config"],
+    "disabled_skills": ["nextcode-config"],
     "tui": {
       "compact_mode": false,
       "diff_mode": "unified",
@@ -207,7 +207,7 @@ reviewed.
 
 > [!IMPORTANT]
 > The following skill paths are loaded by default and DO NOT NEED to be added to `skills_paths`:
-> `.agents/skills`, `.crush/skills`, `.claude/skills`, `.cursor/skills`
+> `.agents/skills`, `.nextcode/skills`, `.claude/skills`, `.cursor/skills`
 
 Other options: `context_paths`, `progress`, `disable_notifications`, `disable_auto_summarize`, `disable_metrics`, `disable_provider_auto_update`, `disable_default_providers`, `data_directory`, `initialize_as`.
 
@@ -252,11 +252,11 @@ Hooks are user-defined shell commands that fire on agent events. Currently only 
     "PreToolUse": [
       {
         "matcher": "^(edit|write|multiedit)$",
-        "command": ".crush/hooks/protect-files.sh"
+        "command": ".nextcode/hooks/protect-files.sh"
       },
       {
         "matcher": "^bash$",
-        "command": ".crush/hooks/no-haskell.sh"
+        "command": ".nextcode/hooks/no-haskell.sh"
       }
     ]
   }
@@ -297,13 +297,13 @@ A JSON payload is piped to the hook command:
 
 | Variable | Description |
 |---|---|
-| `CRUSH_EVENT` | Event name (e.g. `PreToolUse`) |
-| `CRUSH_TOOL_NAME` | Name of the tool being called |
-| `CRUSH_SESSION_ID` | Current session ID |
-| `CRUSH_CWD` | Current working directory |
-| `CRUSH_PROJECT_DIR` | Project root directory |
-| `CRUSH_TOOL_INPUT_COMMAND` | Value of `command` from tool input (if present) |
-| `CRUSH_TOOL_INPUT_FILE_PATH` | Value of `file_path` from tool input (if present) |
+| `NEXTCODE_EVENT` | Event name (e.g. `PreToolUse`) |
+| `NEXTCODE_TOOL_NAME` | Name of the tool being called |
+| `NEXTCODE_SESSION_ID` | Current session ID |
+| `NEXTCODE_CWD` | Current working directory |
+| `NEXTCODE_PROJECT_DIR` | Project root directory |
+| `NEXTCODE_TOOL_INPUT_COMMAND` | Value of `command` from tool input (if present) |
+| `NEXTCODE_TOOL_INPUT_FILE_PATH` | Value of `file_path` from tool input (if present) |
 
 ### Hook Output
 
@@ -329,7 +329,7 @@ exit 2
 
 ### Claude Code Compatibility
 
-Crush also supports the Claude Code hook output format:
+NextCode also supports the Claude Code hook output format:
 
 ```json
 {
@@ -365,6 +365,6 @@ When multiple hooks match, their decisions are aggregated:
 
 ## Environment Variables
 
-- `CRUSH_GLOBAL_CONFIG` - Override global config location
-- `CRUSH_GLOBAL_DATA` - Override data directory location
-- `CRUSH_SKILLS_DIR` - Override default skills directory
+- `NEXTCODE_GLOBAL_CONFIG` - Override global config location
+- `NEXTCODE_GLOBAL_DATA` - Override data directory location
+- `NEXTCODE_SKILLS_DIR` - Override default skills directory

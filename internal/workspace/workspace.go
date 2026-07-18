@@ -10,17 +10,17 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 	"charm.land/catwalk/pkg/catwalk"
-	mcptools "github.com/charmbracelet/crush/internal/agent/tools/mcp"
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/history"
-	"github.com/charmbracelet/crush/internal/lsp"
-	"github.com/charmbracelet/crush/internal/message"
-	"github.com/charmbracelet/crush/internal/oauth"
-	"github.com/charmbracelet/crush/internal/permission"
-	"github.com/charmbracelet/crush/internal/proto"
-	"github.com/charmbracelet/crush/internal/question"
-	"github.com/charmbracelet/crush/internal/session"
-	"github.com/charmbracelet/crush/internal/skills"
+	mcptools "github.com/charmbracelet/nextcode/internal/agent/tools/mcp"
+	"github.com/charmbracelet/nextcode/internal/config"
+	"github.com/charmbracelet/nextcode/internal/history"
+	"github.com/charmbracelet/nextcode/internal/lsp"
+	"github.com/charmbracelet/nextcode/internal/message"
+	"github.com/charmbracelet/nextcode/internal/oauth"
+	"github.com/charmbracelet/nextcode/internal/permission"
+	"github.com/charmbracelet/nextcode/internal/proto"
+	"github.com/charmbracelet/nextcode/internal/question"
+	"github.com/charmbracelet/nextcode/internal/session"
+	"github.com/charmbracelet/nextcode/internal/skills"
 )
 
 // LSPClientInfo holds information about an LSP client's state. This is
