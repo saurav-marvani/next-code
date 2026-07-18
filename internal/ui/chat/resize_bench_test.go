@@ -5,26 +5,26 @@ import (
 	"os"
 	"testing"
 
-	"github.com/charmbracelet/crush/internal/db"
-	"github.com/charmbracelet/crush/internal/message"
-	"github.com/charmbracelet/crush/internal/ui/list"
-	"github.com/charmbracelet/crush/internal/ui/styles"
+	"github.com/charmbracelet/nextcode/internal/db"
+	"github.com/charmbracelet/nextcode/internal/message"
+	"github.com/charmbracelet/nextcode/internal/ui/list"
+	"github.com/charmbracelet/nextcode/internal/ui/styles"
 )
 
 // BenchmarkResizeSession reproduces the resize re-render path over a real
-// session's messages. Point CRUSH_BENCH_SESSION at a full session id and
-// CRUSH_BENCH_DATADIR at the crush data dir (defaults to ./.crush).
+// session's messages. Point NEXTCODE_BENCH_SESSION at a full session id and
+// NEXTCODE_BENCH_DATADIR at the nextcode data dir (defaults to ./.nextcode).
 //
-//	CRUSH_BENCH_SESSION=e6368d820207a406 go test ./internal/ui/chat/ \
+//	NEXTCODE_BENCH_SESSION=e6368d820207a406 go test ./internal/ui/chat/ \
 //	  -run x -bench BenchmarkResizeSession -benchtime 20x -cpuprofile /tmp/cpu.out
 func BenchmarkResizeSession(b *testing.B) {
-	sessionID := os.Getenv("CRUSH_BENCH_SESSION")
+	sessionID := os.Getenv("NEXTCODE_BENCH_SESSION")
 	if sessionID == "" {
-		b.Skip("set CRUSH_BENCH_SESSION to a full session id")
+		b.Skip("set NEXTCODE_BENCH_SESSION to a full session id")
 	}
-	dataDir := os.Getenv("CRUSH_BENCH_DATADIR")
+	dataDir := os.Getenv("NEXTCODE_BENCH_DATADIR")
 	if dataDir == "" {
-		dataDir = ".crush"
+		dataDir = ".nextcode"
 	}
 
 	ctx := context.Background()

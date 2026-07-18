@@ -17,23 +17,23 @@ import (
 	"charm.land/fantasy"
 )
 
-const CrushLogsToolName = "crush_logs"
+const NextCodeLogsToolName = "nextcode_logs"
 
-//go:embed crush_logs.md.tpl
-var crushLogsDescriptionTmpl []byte
+//go:embed nextcode_logs.md.tpl
+var nextcodeLogsDescriptionTmpl []byte
 
-var crushLogsDescriptionTpl = template.Must(
-	template.New("crushLogsDescription").
-		Parse(string(crushLogsDescriptionTmpl)),
+var nextcodeLogsDescriptionTpl = template.Must(
+	template.New("nextcodeLogsDescription").
+		Parse(string(nextcodeLogsDescriptionTmpl)),
 )
 
-type crushLogsDescriptionData struct {
+type nextcodeLogsDescriptionData struct {
 	DefaultLines int
 	MaxLines     int
 }
 
-func crushLogsDescription() string {
-	return renderTemplate(crushLogsDescriptionTpl, crushLogsDescriptionData{
+func nextcodeLogsDescription() string {
+	return renderTemplate(nextcodeLogsDescriptionTpl, nextcodeLogsDescriptionData{
 		DefaultLines: defaultLogLines,
 		MaxLines:     maxLogLines,
 	})
@@ -69,23 +69,23 @@ var sensitiveKeys = []string{
 	"credential",
 }
 
-type CrushLogsParams struct {
+type NextCodeLogsParams struct {
 	Lines int `json:"lines,omitempty" description:"Number of recent log entries to return (default 50, max 100)"`
 }
 
-func NewCrushLogsTool(logFile string) fantasy.AgentTool {
+func NewNextCodeLogsTool(logFile string) fantasy.AgentTool {
 	return fantasy.NewAgentTool(
-		CrushLogsToolName,
-		crushLogsDescription(),
-		func(ctx context.Context, params CrushLogsParams, call fantasy.ToolCall) (fantasy.ToolResponse, error) {
-			result := runCrushLogs(logFile, params)
+		NextCodeLogsToolName,
+		nextcodeLogsDescription(),
+		func(ctx context.Context, params NextCodeLogsParams, call fantasy.ToolCall) (fantasy.ToolResponse, error) {
+			result := runNextCodeLogs(logFile, params)
 			return fantasy.NewTextResponse(result), nil
 		},
 	)
 }
 
-// runCrushLogs reads and formats the last N log entries from the given file.
-func runCrushLogs(logFile string, params CrushLogsParams) string {
+// runNextCodeLogs reads and formats the last N log entries from the given file.
+func runNextCodeLogs(logFile string, params NextCodeLogsParams) string {
 	// Validate and clamp the lines parameter.
 	lines := params.Lines
 	if lines <= 0 {

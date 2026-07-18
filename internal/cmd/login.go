@@ -8,12 +8,12 @@ import (
 	"os/signal"
 
 	"charm.land/lipgloss/v2"
-	"github.com/charmbracelet/crush/internal/clipboard"
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/oauth"
-	"github.com/charmbracelet/crush/internal/oauth/copilot"
-	"github.com/charmbracelet/crush/internal/oauth/hyper"
-	"github.com/charmbracelet/crush/internal/workspace"
+	"github.com/charmbracelet/nextcode/internal/clipboard"
+	"github.com/charmbracelet/nextcode/internal/config"
+	"github.com/charmbracelet/nextcode/internal/oauth"
+	"github.com/charmbracelet/nextcode/internal/oauth/copilot"
+	"github.com/charmbracelet/nextcode/internal/oauth/hyper"
+	"github.com/charmbracelet/nextcode/internal/workspace"
 	"github.com/pkg/browser"
 	"github.com/spf13/cobra"
 )
@@ -21,19 +21,19 @@ import (
 var loginCmd = &cobra.Command{
 	Aliases: []string{"auth"},
 	Use:     "login [platform]",
-	Short:   "Login Crush to a platform",
-	Long: `Login Crush to a specified platform.
+	Short:   "Login NextCode to a platform",
+	Long: `Login NextCode to a specified platform.
 The platform should be provided as an argument.
 Available platforms are: hyper, copilot.`,
 	Example: `
 # Authenticate with Charm Hyper
-crush login
+nextcode login
 
 # Authenticate with GitHub Copilot
-crush login copilot
+nextcode login copilot
 
 # Force re-authentication even if already logged in
-crush login -f copilot
+nextcode login -f copilot
   `,
 	ValidArgs: []cobra.Completion{
 		"hyper",

@@ -6,10 +6,10 @@ import (
 	"testing"
 
 	"charm.land/bubbles/v2/textarea"
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/session"
-	"github.com/charmbracelet/crush/internal/ui/chat"
-	"github.com/charmbracelet/crush/internal/ui/common"
+	"github.com/charmbracelet/nextcode/internal/config"
+	"github.com/charmbracelet/nextcode/internal/session"
+	"github.com/charmbracelet/nextcode/internal/ui/chat"
+	"github.com/charmbracelet/nextcode/internal/ui/common"
 )
 
 // testMessageItem is a minimal chat item used to populate the chat list

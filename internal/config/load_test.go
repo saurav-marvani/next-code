@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"charm.land/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/crush/internal/csync"
-	"github.com/charmbracelet/crush/internal/env"
+	"github.com/charmbracelet/nextcode/internal/csync"
+	"github.com/charmbracelet/nextcode/internal/env"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -46,15 +46,15 @@ func TestLookupConfigs_BoundedByProject(t *testing.T) {
 	// control so they can be present in the result without polluting
 	// the developer's real config.
 	globalDir := t.TempDir()
-	t.Setenv("CRUSH_GLOBAL_CONFIG", globalDir)
-	t.Setenv("CRUSH_GLOBAL_DATA", globalDir)
+	t.Setenv("NEXTCODE_GLOBAL_CONFIG", globalDir)
+	t.Setenv("NEXTCODE_GLOBAL_DATA", globalDir)
 
-	t.Run("does not pick up crush.json above non-git project", func(t *testing.T) {
+	t.Run("does not pick up nextcode.json above non-git project", func(t *testing.T) {
 		parent := t.TempDir()
 
-		// crush.json above the project must not be adopted.
+		// nextcode.json above the project must not be adopted.
 		require.NoError(t, os.WriteFile(
-			filepath.Join(parent, "crush.json"),
+			filepath.Join(parent, "nextcode.json"),
 			[]byte(`{}`),
 			0o644,
 		))
@@ -64,11 +64,11 @@ func TestLookupConfigs_BoundedByProject(t *testing.T) {
 
 		got := lookupConfigs(project)
 		for _, p := range got {
-			require.NotEqual(t, filepath.Join(parent, "crush.json"), p)
+			require.NotEqual(t, filepath.Join(parent, "nextcode.json"), p)
 		}
 	})
 
-	t.Run("does not climb out of git worktree to find crush.json", func(t *testing.T) {
+	t.Run("does not climb out of git worktree to find nextcode.json", func(t *testing.T) {
 		if _, err := exec.LookPath("git"); err != nil {
 			t.Skip("git not available")
 		}
@@ -76,7 +76,7 @@ func TestLookupConfigs_BoundedByProject(t *testing.T) {
 		parent := t.TempDir()
 
 		require.NoError(t, os.WriteFile(
-			filepath.Join(parent, "crush.json"),
+			filepath.Join(parent, "nextcode.json"),
 			[]byte(`{}`),
 			0o644,
 		))
@@ -88,20 +88,20 @@ func TestLookupConfigs_BoundedByProject(t *testing.T) {
 		require.NoError(t, gitInit.Run())
 
 		got := lookupConfigs(worktree)
-		strayEval, err := filepath.EvalSymlinks(filepath.Join(parent, "crush.json"))
+		strayEval, err := filepath.EvalSymlinks(filepath.Join(parent, "nextcode.json"))
 		require.NoError(t, err)
 		for _, p := range got {
 			pEval, err := filepath.EvalSymlinks(p)
 			if err != nil {
 				continue
 			}
-			require.NotEqual(t, strayEval, pEval, "must not adopt parent crush.json")
+			require.NotEqual(t, strayEval, pEval, "must not adopt parent nextcode.json")
 		}
 	})
 
-	t.Run("picks up crush.json inside the project", func(t *testing.T) {
+	t.Run("picks up nextcode.json inside the project", func(t *testing.T) {
 		project := t.TempDir()
-		local := filepath.Join(project, "crush.json")
+		local := filepath.Join(project, "nextcode.json")
 		require.NoError(t, os.WriteFile(local, []byte(`{}`), 0o644))
 
 		got := lookupConfigs(project)
@@ -119,7 +119,7 @@ func TestLookupConfigs_BoundedByProject(t *testing.T) {
 				break
 			}
 		}
-		require.True(t, foundLocal, "expected project crush.json to be in lookup result: %v", got)
+		require.True(t, foundLocal, "expected project nextcode.json to be in lookup result: %v", got)
 	})
 
 	t.Run("global config is always included regardless of boundary", func(t *testing.T) {
@@ -184,7 +184,7 @@ func TestConfig_setDefaults(t *testing.T) {
 		require.NotNil(t, cfg.Models)
 		require.NotNil(t, cfg.LSP)
 		require.NotNil(t, cfg.MCP)
-		require.Equal(t, filepath.Join(workingDir, ".crush"), cfg.Options.DataDirectory)
+		require.Equal(t, filepath.Join(workingDir, ".nextcode"), cfg.Options.DataDirectory)
 		require.Equal(t, "AGENTS.md", cfg.Options.InitializeAs)
 		for _, path := range defaultContextPaths {
 			require.Contains(t, cfg.Options.ContextPaths, path)
@@ -239,10 +239,10 @@ func TestConfig_setDefaults(t *testing.T) {
 		require.Equal(t, filepath.Join(workingDir, "state"), cfg.Options.DataDirectory)
 	})
 
-	t.Run("does not adopt .crush from a parent project", func(t *testing.T) {
+	t.Run("does not adopt .nextcode from a parent project", func(t *testing.T) {
 		parent := t.TempDir()
 
-		// .crush in the parent: it should not be reused by the child
+		// .nextcode in the parent: it should not be reused by the child
 		// because there is no git context joining them.
 		require.NoError(t, os.Mkdir(filepath.Join(parent, defaultDataDirectory), 0o755))
 
@@ -259,14 +259,14 @@ func TestConfig_setDefaults(t *testing.T) {
 		)
 	})
 
-	t.Run("does not climb out of git worktree to find .crush", func(t *testing.T) {
+	t.Run("does not climb out of git worktree to find .nextcode", func(t *testing.T) {
 		if _, err := exec.LookPath("git"); err != nil {
 			t.Skip("git not available")
 		}
 
 		parent := t.TempDir()
 
-		// Stray .crush above the worktree root.
+		// Stray .nextcode above the worktree root.
 		require.NoError(t, os.Mkdir(filepath.Join(parent, defaultDataDirectory), 0o755))
 
 		worktree := filepath.Join(parent, "worktree")
@@ -295,7 +295,7 @@ func TestConfig_setDefaults(t *testing.T) {
 
 		strayEval, err := filepath.EvalSymlinks(filepath.Join(parent, defaultDataDirectory))
 		require.NoError(t, err)
-		require.NotEqual(t, strayEval, gotEval, "must not adopt parent .crush")
+		require.NotEqual(t, strayEval, gotEval, "must not adopt parent .nextcode")
 
 		subEval, err := filepath.EvalSymlinks(sub)
 		require.NoError(t, err)
@@ -710,7 +710,7 @@ func TestConfig_setupAgentsWithDisabledTools(t *testing.T) {
 	coderAgent, ok := cfg.Agents[AgentCoder]
 	require.True(t, ok)
 
-	assert.Equal(t, []string{"agent", "bash", "crush_info", "crush_logs", "job_output", "job_kill", "multiedit", "lsp_diagnostics", "lsp_references", "lsp_restart", "lsp_symbols", "lsp_definition", "lsp_call_hierarchy", "lsp_rename", "lsp_replace_symbol", "fetch", "agentic_fetch", "glob", "ls", "question", "sourcegraph", "todos", "view", "write", "list_mcp_resources", "read_mcp_resource"}, coderAgent.AllowedTools)
+	assert.Equal(t, []string{"agent", "bash", "nextcode_info", "nextcode_logs", "job_output", "job_kill", "multiedit", "lsp_diagnostics", "lsp_references", "lsp_restart", "lsp_symbols", "lsp_definition", "lsp_call_hierarchy", "lsp_rename", "lsp_replace_symbol", "fetch", "agentic_fetch", "glob", "ls", "question", "sourcegraph", "todos", "view", "write", "list_mcp_resources", "read_mcp_resource"}, coderAgent.AllowedTools)
 
 	taskAgent, ok := cfg.Agents[AgentTask]
 	require.True(t, ok)
@@ -736,7 +736,7 @@ func TestConfig_setupAgentsWithEveryReadOnlyToolDisabled(t *testing.T) {
 	cfg.SetupAgents()
 	coderAgent, ok := cfg.Agents[AgentCoder]
 	require.True(t, ok)
-	assert.Equal(t, []string{"agent", "bash", "crush_info", "crush_logs", "job_output", "job_kill", "download", "edit", "multiedit", "lsp_diagnostics", "lsp_references", "lsp_restart", "lsp_rename", "lsp_replace_symbol", "fetch", "agentic_fetch", "question", "todos", "write", "list_mcp_resources", "read_mcp_resource"}, coderAgent.AllowedTools)
+	assert.Equal(t, []string{"agent", "bash", "nextcode_info", "nextcode_logs", "job_output", "job_kill", "download", "edit", "multiedit", "lsp_diagnostics", "lsp_references", "lsp_restart", "lsp_rename", "lsp_replace_symbol", "fetch", "agentic_fetch", "question", "todos", "write", "list_mcp_resources", "read_mcp_resource"}, coderAgent.AllowedTools)
 
 	taskAgent, ok := cfg.Agents[AgentTask]
 	require.True(t, ok)
@@ -1640,7 +1640,7 @@ func TestConfig_configureProvidersDisableDefaultProviders(t *testing.T) {
 
 func TestConfig_setDefaultsDisableDefaultProvidersEnvVar(t *testing.T) {
 	t.Run("sets option from environment variable", func(t *testing.T) {
-		t.Setenv("CRUSH_DISABLE_DEFAULT_PROVIDERS", "true")
+		t.Setenv("NEXTCODE_DISABLE_DEFAULT_PROVIDERS", "true")
 
 		cfg := &Config{}
 		cfg.setDefaults("/tmp", "")
@@ -1663,7 +1663,7 @@ func TestConfig_setDefaultsDisableDefaultProvidersEnvVar(t *testing.T) {
 func TestConfig_configureSelectedModels(t *testing.T) {
 	t.Run("reload mode should not persist fallback defaults", func(t *testing.T) {
 		dir := t.TempDir()
-		globalPath := filepath.Join(dir, "crush.json")
+		globalPath := filepath.Join(dir, "nextcode.json")
 		require.NoError(t, os.WriteFile(globalPath, []byte(`{"models":{"large":{"provider":"ghost","model":"missing"}}}`), 0o600))
 
 		knownProviders := []catwalk.Provider{
@@ -1866,7 +1866,7 @@ func TestConfig_configureSelectedModels(t *testing.T) {
 	})
 	t.Run("resolve and persist fallback under writeMu does not deadlock", func(t *testing.T) {
 		dir := t.TempDir()
-		globalPath := filepath.Join(dir, "crush.json")
+		globalPath := filepath.Join(dir, "nextcode.json")
 		require.NoError(t, os.WriteFile(globalPath, []byte(`{}`), 0o600))
 
 		knownProviders := []catwalk.Provider{

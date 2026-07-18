@@ -1,5 +1,5 @@
 // Package mcp provides functionality for managing Model Context Protocol (MCP)
-// clients within the Crush application.
+// clients within the NextCode application.
 package mcp
 
 import (
@@ -16,12 +16,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/csync"
-	"github.com/charmbracelet/crush/internal/home"
-	"github.com/charmbracelet/crush/internal/permission"
-	"github.com/charmbracelet/crush/internal/pubsub"
-	"github.com/charmbracelet/crush/internal/version"
+	"github.com/charmbracelet/nextcode/internal/config"
+	"github.com/charmbracelet/nextcode/internal/csync"
+	"github.com/charmbracelet/nextcode/internal/home"
+	"github.com/charmbracelet/nextcode/internal/permission"
+	"github.com/charmbracelet/nextcode/internal/pubsub"
+	"github.com/charmbracelet/nextcode/internal/version"
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 )
 
@@ -453,7 +453,7 @@ func updateState(name string, state State, err error, client *ClientSession, cou
 		// close it so the child process and its stdio pipes are released — the
 		// bare map delete this used to do leaked both. Clearing the tool
 		// registry keeps the agent from advertising tools it can no longer
-		// call: without it, crush_info / the `/mcp` menu and the tool list
+		// call: without it, nextcode_info / the `/mcp` menu and the tool list
 		// handed to the LLM diverge, so a server still reads "connected, N
 		// tools" while every call fails with "tool not found".
 		if old, ok := sessions.Take(name); ok {
@@ -495,9 +495,9 @@ func createSession(ctx context.Context, name string, m config.MCPConfig, resolve
 
 	client := mcp.NewClient(
 		&mcp.Implementation{
-			Name:    "crush",
+			Name:    "nextcode",
 			Version: version.Version,
-			Title:   "Crush",
+			Title:   "NextCode",
 		},
 		&mcp.ClientOptions{
 			ToolListChangedHandler: func(context.Context, *mcp.ToolListChangedRequest) {

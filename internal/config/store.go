@@ -12,12 +12,12 @@ import (
 	"time"
 
 	"charm.land/catwalk/pkg/catwalk"
-	hyperp "github.com/charmbracelet/crush/internal/agent/hyper"
-	"github.com/charmbracelet/crush/internal/env"
-	"github.com/charmbracelet/crush/internal/lock"
-	"github.com/charmbracelet/crush/internal/oauth"
-	"github.com/charmbracelet/crush/internal/oauth/copilot"
-	"github.com/charmbracelet/crush/internal/oauth/hyper"
+	hyperp "github.com/charmbracelet/nextcode/internal/agent/hyper"
+	"github.com/charmbracelet/nextcode/internal/env"
+	"github.com/charmbracelet/nextcode/internal/lock"
+	"github.com/charmbracelet/nextcode/internal/oauth"
+	"github.com/charmbracelet/nextcode/internal/oauth/copilot"
+	"github.com/charmbracelet/nextcode/internal/oauth/hyper"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
 	"golang.org/x/sync/singleflight"
@@ -73,8 +73,8 @@ type ConfigStore struct {
 	config             *Config
 	workingDir         string
 	resolver           VariableResolver
-	globalDataPath     string   // ~/.local/share/crush/crush.json
-	workspacePath      string   // .crush/crush.json
+	globalDataPath     string   // ~/.local/share/nextcode/nextcode.json
+	workspacePath      string   // .nextcode/nextcode.json
 	loadedPaths        []string // config files that were successfully loaded
 	knownProviders     []catwalk.Provider
 	overrides          RuntimeOverrides
@@ -533,7 +533,7 @@ func (s *ConfigStore) SetProviderAPIKey(scope Scope, providerID string, apiKey a
 //
 // Providers like Hyper rotate refresh tokens: each exchange consumes the
 // caller's refresh token, issues a new pair, and revokes the old one. If
-// two crush instances (or two goroutines) refresh concurrently with the
+// two nextcode instances (or two goroutines) refresh concurrently with the
 // same stored refresh token, the second exchange reuses an already-revoked
 // token, trips the provider's reuse detection, and revokes the entire
 // token family — leaving both with dead tokens even though each refresh

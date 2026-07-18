@@ -4,12 +4,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/message"
-	"github.com/charmbracelet/crush/internal/ui/anim"
-	"github.com/charmbracelet/crush/internal/ui/attachments"
-	"github.com/charmbracelet/crush/internal/ui/list"
-	"github.com/charmbracelet/crush/internal/ui/styles"
+	"github.com/charmbracelet/nextcode/internal/config"
+	"github.com/charmbracelet/nextcode/internal/message"
+	"github.com/charmbracelet/nextcode/internal/ui/anim"
+	"github.com/charmbracelet/nextcode/internal/ui/attachments"
+	"github.com/charmbracelet/nextcode/internal/ui/list"
+	"github.com/charmbracelet/nextcode/internal/ui/styles"
 	"github.com/stretchr/testify/require"
 )
 
